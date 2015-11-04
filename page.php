@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class = "container main-content">
-	
+
 	<div class="panel panel-default panel-body">
 		<div class="row">
 			<div class="col-md-4">
@@ -14,11 +14,11 @@
 				</ul>
 			</div>
 			<div class="col-md-4">
-			
-			</div>			
+
+			</div>
 		</div>
 	</div>
-	
+
 	<div class = "panel panel-default panel-body">
 		<div class = "row">
 			<div class = "col-md-8">
@@ -35,5 +35,5 @@
 		</div>
 	</div>
 
-</div>	
+</div>
 <?php get_footer(); ?>
