@@ -18,7 +18,7 @@ Version: 1
 }
 body{
 	font-family: 'Oxygen', sans-serif;
-	background-color:#000;
+	background-color:#fff;
 	padding:0;
 }
 
@@ -30,7 +30,6 @@ p{
 
 }
 
-
 /*-------- logo --------*/
 .navbar-header{
     /*height: 90px*/
@@ -38,7 +37,7 @@ p{
     }
 
 .navbar .brand{
-    padding: 0 10px;
+    padding: 0 10px 0 0;
 }
 
 .navbar .nav > li > a {
@@ -91,138 +90,48 @@ p{
 
 /*--------------------*/
 
-
-
-.footer p{
-    color:#fff;
-}
-
-.panel{
-	border:0;
-}
-
-.panel h1{
-	margin-top:10px;
-	margin-bottom:40px;
-	margin-left:10px;
-	color: #ff6600;
-	text-transform: uppercase;
-}
-.panel h3{
-	margin-top:5px;
-}
-
-.main-content{
-	padding-top:0;
-	margin-top:0;
-	width:100%;
-	background-color:#fff;
-}
-
-
-/*-----------*/
-
-.container-fluid{
-	padding: 0;
-}
-
+/*----header banner----*/
 .image-container{
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	height: 500px;
-	z-index: 1;
+	border-top: 4px solid #fff;
 }
 
 .image-container img{
 	width: 100%;
-
 }
 
 .header-info{
-	position: relative;
-	z-index: 2;
-	top:-10px;
+	position: absolute;
+	top:200px;
+	left: 0;
+	width: 50%;
+	letter-spacing: -1px;
+   	background: rgb(0, 0, 0); /* fallback color */
+   	background: rgba(0, 0, 0, 0.7);
+   	padding: 10px;
+   	color: white;
 }
 
-#myCarousel{
-	margin-bottom:0;
+.header-info h1 {
+   	font: bold 24px/45px Helvetica, Sans-Serif;
+   	margin: 0;
 }
 
-.home-blog-thumbnail{
-	float:left;
-	border:0px solid #FF6600;
+.header-info p{
+   	font: bold 14px Helvetica, Sans-Serif;
 }
+/*-------------------*/
 
-.caption{
-	margin-left:15px;
-	float:left;
-	width:320px;
-}
 
-.carousel-caption h2 a{
-	color:#ff6600;
-	width: auto;
-}
-
-.carousel-caption h2 a:hover{
-	color:#ff9933;
-	width: auto;
-	text-decoration: none;
-}
-
-.carousel-indicators li{
-	border:2px solid #333;
-}
-
-.carousel-indicators .active{
- 	background-color:#ff6600;
-	border:2px solid #333;
-}
-
-.carousel-title{
-    background: transparent url("images/blacktransparent.png") repeat right top;
-    display:block;
-	text-transform: uppercase;
-    font-weight:bold;
-	padding: 10px 10px;
-	text-align: center;
-	width:auto;
-	height:auto;
-	font-size:1em;
-	border-top-left-radius:5px;
-	border-bottom-left-radius:5px;
-	border-top-right-radius:5px;
-	border-bottom-right-radius:5px;
-}
-
-.entry-subtitle{
-	text-indent: -9999px;
-}
-
-.img-thumbnail{
-	background-color:#ff6600;
-}
-
-.caption h3 a{
-	color:#666666;
-	font-size:1.2em;
-    font-weight:bold;
-	text-transform:uppercase;
-}
-
-.home-blog{
-	margin-bottom:10px;
-	margin-top:10px;
-	width:auto;
-	border-bottom:2px solid #ccc;
-	padding:0;
-}
-
-.home-blog:last-child{
-	border:none;
+.main{
+	margin-bottom:20px;
+	margin-top:20px;
+	border:0px solid #ccc;
 
 }
+
 
 .single-blog{
 	margin-bottom:10px;
