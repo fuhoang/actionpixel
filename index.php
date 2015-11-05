@@ -4,7 +4,7 @@
 <div class="container">
   <div class="image-container">
     <a href="">
-      <img src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
+      <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
     </a>
     <div class="header-info">
       <h1>Hello, world!</h1>
@@ -17,9 +17,9 @@
 <div class="container main">
   <div class="row">
 
-    <div class="col-md-4">
+    <div class="col-md-4 col-xs-12">
       <div class="thumbnail">
-        <img src="http://placehold.it/500x300" alt="">
+        <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
           <div class="caption">
             <h4>Thumbnail label</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 col-xs-12">
       <div class="thumbnail">
         <img src="http://placehold.it/500x300" alt="">
         <div class="caption">
@@ -38,7 +38,43 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-xs-12">
+      <div class="thumbnail">
+        <img src="http://placehold.it/500x300" alt="">
+        <div class="caption">
+          <h4>Thumbnail label</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+          <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- End row -->
+
+  <div class="row">
+
+    <div class="col-md-4 col-xs-12">
+      <div class="thumbnail">
+        <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
+          <div class="caption">
+            <h4>Thumbnail label</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+            <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12">
+      <div class="thumbnail">
+        <img src="http://placehold.it/500x300" alt="">
+        <div class="caption">
+          <h4>Thumbnail label</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+          <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-xs-12">
       <div class="thumbnail">
         <img src="http://placehold.it/500x300" alt="">
         <div class="caption">

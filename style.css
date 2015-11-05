@@ -122,6 +122,22 @@ p{
 .header-info p{
    	font: bold 14px Helvetica, Sans-Serif;
 }
+
+@media (max-width:768px) {
+    .header-info{
+    	position: relative;
+    	top: 0;
+        width:100%;
+    }
+}
+
+@media (max-width:992px) {
+    .header-info{
+    	position: relative;
+    	top: 0;
+        width:100%;
+    }
+}
 /*-------------------*/
 
 
@@ -129,8 +145,11 @@ p{
 	margin-bottom:20px;
 	margin-top:20px;
 	border:0px solid #ccc;
-
 }
+
+
+
+
 
 
 .single-blog{
