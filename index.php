@@ -19,9 +19,11 @@
 
     <div class="col-md-4 col-xs-12">
       <div class="thumbnail">
-        <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
+        <a href="#">
+          <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
+        </a>
           <div class="caption">
-            <h4>Thumbnail label</h4>
+            <h4><a href="#">Thumbnail label</a></h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
             <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
           </div>
