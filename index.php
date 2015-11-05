@@ -7,9 +7,9 @@
       <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
     </a>
     <div class="header-info">
-      <h1>Hello, world!</h1>
+      <h1><a href="">How did Deadpool spend his Halloween?</a></h1>
       <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-sm" href="#" role="button">Learn more &raquo;</a></p>
+      <p><a class="btn btn-sm ap-btn" href="#" role="button">Read</a></p>
     </div>
   </div>
 </div>
@@ -22,10 +22,15 @@
         <a href="#">
           <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
         </a>
+        	<div class="well">
+        		<span><i class="fa fa-user"></i> Dulani wilson</span>
+        		<span><i class="fa fa-calendar"></i> Nov 5, 2015 </span>
+        		<span><i class="fa fa-folder"></i> Comics </span>
+        	</div>
           <div class="caption">
-            <h4><a href="#">Thumbnail label</a></h4>
+            <h3><a href="#">Thumbnail label</a></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-            <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+            <p><a href="#" class="btn btn-xs ap-btn" role="button">Read</a></p>
           </div>
       </div>
     </div>
@@ -36,7 +41,7 @@
         <div class="caption">
           <h4>Thumbnail label</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-          <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+          <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Read</a></p>
         </div>
       </div>
     </div>
