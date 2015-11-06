@@ -3,14 +3,27 @@
 
 <div class="container">
   <div class="image-container">
+<?php
+  $the_query = new WP_Query('posts_per_page=1');
+  if ( $the_query->have_posts() ) :
+?>
+  <?php if ( is_home() ) : ?>
+    <?php
+        while ( $the_query->have_posts() ) : $the_query->the_post();
+    ?>
     <a href="">
-      <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
+      <?php the_post_thumbnail('feature');?>
+      <!--<img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">-->
     </a>
     <div class="header-info">
-      <h1><a href="">How did Deadpool spend his Halloween?</a></h1>
+      <h1><a href=""><?php the_title(); ?></a></h1>
       <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
       <p><a class="btn btn-sm ap-btn" href="#" role="button">Read</a></p>
     </div>
+    <?php wp_reset_postdata(); ?>
+    <?php endwhile;?>
+  <?php endif;?>
+<?php endif;?>
   </div>
 </div>
 

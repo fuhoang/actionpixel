@@ -16,8 +16,8 @@ if(function_exists( 'add_theme_support' )){
 
 if(function_exists('add_image_size')){
 	add_image_size( 'front-blog-feature', 420, 250, true);
-	add_image_size( 'feature');
-	
+	add_image_size( 'feature',  2000, 600);
+
 }
 
 function add_image_class($class){
@@ -34,7 +34,7 @@ if(function_exists(register_sidebar)){
 		'description' => 'Place widgets for the sidebar here.',
 		'before_widget' => '<div class="sidebar-module">',
 		'after_widget' => '</div>',
-		
+
 	));
 }
 
@@ -74,7 +74,7 @@ function my_post_queries( $query ) {
   // do not alter the query on wp-admin pages and only alter it if it's the main query
   if (!is_admin() && $query->is_main_query()){
 
-    // alter the query for the home and category pages 
+    // alter the query for the home and category pages
 
     if(is_category()){
       $query->set('posts_per_page', 10);
@@ -85,7 +85,7 @@ function my_post_queries( $query ) {
 add_action( 'pre_get_posts', 'my_post_queries' );
 
 
-function my_post_limit($limit) { 
+function my_post_limit($limit) {
 	global $paged, $myOffset;
 	if (empty($paged)) {
 			$paged = 1;

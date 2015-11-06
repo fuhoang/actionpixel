@@ -34,7 +34,7 @@ p{
 /*----button-----*/
 .ap-btn{
 	background-color: #434343;
-	color:#fff; 
+	color:#fff;
 }
 
 /*-------- logo --------*/
@@ -85,8 +85,8 @@ p{
 	color:#ff6600;
 	background-color: #e7e7e7;
 }
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus{
 	color:#ff6600;
 	padding: 20px;
@@ -159,6 +159,7 @@ p{
 
 .thumbnail{
  	padding: 0;
+    margin: 10px 0 10px 0;
 }
 
 .well{
@@ -183,6 +184,22 @@ p{
 .caption h3 a{
 	color:#ff6600;
 }
+
+
+/* category page */
+
+.category-header{
+    text-align: center;
+    color: #808080;
+    padding: 20px 0 20px;
+    border-bottom: 4px solid #ff6600;
+    background-color: #f5f5f5;
+}
+.category-header h1{
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
 
 
 /*---------footer------------*/
