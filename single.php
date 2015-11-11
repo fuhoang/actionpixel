@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <div class="container main">
-	<?php if(have_posts()) : the_post(); ?>
   <div class="image-container">
+	
   <?php the_post_thumbnail('feature', array( 'class'	=> "img-responsive")); ?>
  		<div class="blog-header">
       <h1 class="blog-title"><?php the_title(); ?></h1>
-      <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+      <span class="lead"><p><?php the_subtitle(); ?></span>
       <div class="well">
        	<span><i class="fa fa-user"></i> <?php the_author(); ?></span>
         <span><i class="fa fa-calendar"></i> <?php the_time(' jS F, Y'); ?></span>
@@ -13,6 +13,7 @@
       </div>
   	</div>
   </div>
+  
 	<div class="row">
 	  <div class="col-md-8 col-sm-12 col-xs-12 blog-main">
 	    <div class="blog-post">
@@ -73,6 +74,6 @@
 			</div>
 		</div>
 	</div><!--end row-->
-	<?php endif; ?>
+
 </div><!--end container-->
 <?php get_footer(); ?>

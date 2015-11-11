@@ -6,82 +6,44 @@
 </div>
 <div class="container main">
   <div class="row">
-
+    <?php
+      $categories = get_the_category();
+      if($categories){
+        foreach($categories as $category) {
+          $cat_id = $category->cat_ID;
+        }
+      }   
+      $wp_query = new WP_Query(array('cat' => $cat_id ));
+      if ( $wp_query->have_posts() ) :
+        while($wp_query->have_posts()) : $wp_query->the_post();
+          $cats = get_the_category(); 
+    ?>
     <div class="col-md-4 col-xs-12">
       <div class="thumbnail">
-        <a href="#">
-          <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
+        <a href="<?php the_permalink(); ?>">
+          <div class="thumbnail-img-container">
+          <?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'img-responsive' ) );?>
+          </div>
         </a>
-        	<div class="well">
-        		<span><i class="fa fa-user"></i> Dulani wilson</span>
-        		<span><i class="fa fa-calendar"></i> Nov 5, 2015 </span>
-        		<span><i class="fa fa-folder"></i> Comics </span>
-        	</div>
+          <div class="well">
+            <span><i class="fa fa-user"></i> <?php the_author(); ?></span>
+            <span><i class="fa fa-calendar"></i> <?php the_time('jS M,  Y'); ?></span>
+            <span><i class="fa fa-folder"></i> <?php echo $cats[0]->name ?> </span>
+          </div>
           <div class="caption">
-            <h3><a href="#">Thumbnail label</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-            <p><a href="#" class="btn btn-xs ap-btn" role="button">Read</a></p>
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <?php the_excerpt('...'); ?>
+            <p><a href="<?php the_permalink(); ?>" class="btn btn-xs ap-btn" role="button">Read</a></p>
           </div>
       </div>
     </div>
-
-    <div class="col-md-4 col-xs-12">
-      <div class="thumbnail">
-        <img src="http://placehold.it/500x300" alt="">
-        <div class="caption">
-          <h4>Thumbnail label</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-          <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Read</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-xs-12">
-      <div class="thumbnail">
-        <img src="http://placehold.it/500x300" alt="">
-        <div class="caption">
-          <h4>Thumbnail label</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-          <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- End row -->
-
-  <div class="row">
-
-    <div class="col-md-4 col-xs-12">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
-          <div class="caption">
-            <h4>Thumbnail label</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-            <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 col-xs-12">
-      <div class="thumbnail">
-        <img src="http://placehold.it/500x300" alt="">
-        <div class="caption">
-          <h4>Thumbnail label</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-          <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-xs-12">
-      <div class="thumbnail">
-        <img src="http://placehold.it/500x300" alt="">
-        <div class="caption">
-          <h4>Thumbnail label</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-          <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-        </div>
-      </div>
-    </div>
-
+    <?php
+      $i++;
+          if ($i%3 == 0) echo '</div><div class="row">';    
+        endwhile;
+      endif;
+      wp_reset_postdata();  
+    ?>
   </div><!-- End row -->
 </div>
 <?php get_footer(); ?>

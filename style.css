@@ -162,9 +162,10 @@ p{
     	position: relative;
     	top: 0;
         width:100%;
-        height:
+        height:auto;
     }
 }
+
 /*-------------------*/
 
 .main{

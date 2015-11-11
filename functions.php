@@ -15,7 +15,7 @@ if(function_exists( 'add_theme_support' )){
 }
 
 if(function_exists('add_image_size')){
-	add_image_size( 'front-blog-feature', 420, 250, true);
+	add_image_size( 'post-thumbnail', 420, 250, true);
 	add_image_size( 'feature',  1400, 600, array( 'left', 'top' ) );
 	add_image_size( 'recent-thumbnails',  400, 300, array( 'left', 'top' ) );
 
