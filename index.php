@@ -16,8 +16,8 @@
     </a>
     <div class="header-info">
       <h1><a href=" <?php the_permalink();?>"><?php the_title(); ?></a></h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-sm ap-btn" href="#" role="button">Read</a></p>
+      <p><?php the_excerpt('...'); ?></p>
+      <p><a class="btn btn-sm ap-btn" href="<?php the_permalink();?>" role="button">Read</a></p>
     </div>
     <?php wp_reset_postdata(); ?>
     <?php endwhile;?>

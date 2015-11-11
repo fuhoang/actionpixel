@@ -101,7 +101,7 @@ p{
 .image-container{
 	position: relative;
 	width: 100%;
-    height: 400px;
+    height: 450px;
 	overflow: hidden;
 	border-top: 4px solid #fff;
 }
@@ -228,6 +228,7 @@ p{
 .blog-header h1{
     color:#ff6600;
     font-weight: 800;
+    text-transform: uppercase;
 }
 .blog-header .well{
     margin: 10px 10px 0 0;

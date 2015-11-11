@@ -19,7 +19,7 @@
 	    	<?php the_content();?>
 	    </div><!-- /.blog-post -->
 	  </div>
-	  <div class = "col-md-4 col-xs-12">
+	  <div class = "col-md-4 col-sm-12 col-xs-12">
 	  	<div class="sidebar-container">
 	  		<?php
 	  		$post_id = get_the_ID();

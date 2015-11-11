@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <div class="container">
-	<h2><?php the_title(); ?></h2>
+	<header class="category-header">
+		<h1> <?php the_title(); ?></h1>
+	</header>
 </div>
 
 <div class="container main">
