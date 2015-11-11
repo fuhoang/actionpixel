@@ -33,7 +33,7 @@ p{
 
 /*----button-----*/
 .ap-btn{
-	background-color: #434343;
+	background-color: #777;
 	color:#fff;
 }
 
@@ -125,6 +125,8 @@ p{
    	font-weight: 700;
    	font: bold 24px/45px Helvetica, Sans-Serif;
    	margin: 0;
+    line-height:110%;
+    margin-bottom: 10px;
 }
 .header-info h1 a{
 	color:#ff6600;
@@ -225,8 +227,15 @@ p{
 }
 
 .blog-post{
-    margin: 20px 0 20px;
+    margin: 40px 0 40px;
     font-size: 16px;
+}
+.blog-post p{
+    line-height:180%;
+}
+
+.embed-responsive{
+    margin-bottom: 20px;
 }
 
 @media (max-width:768px) {
@@ -249,12 +258,43 @@ p{
 }
 
 
+/*---------sidebar-----------*/
+.sidebar-container{
+    margin: 40px 0 40px;
+}
+
+.sidebar-container h2{
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-bottom: 2px solid #ff6600;
+    text-transform: uppercase;
+    color: #808080;
+    font-size: 16px;
+    font-weight: 800;
+}
+.sidebar-container h4{
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    margin: 0 0 20px;
+    padding: 10px;
+    text-align: center;
+}
+.sidebar-container img {
+    margin: 0;
+}
+
+.sidebar-container h4 a{
+    color: #fff;
+}
+
 /*---------footer------------*/
 .footer{
 	padding:0;
 	margin:0;
 	border-top: 2px solid #ccc;
 	text-align: center;
+    background-color: #f8f8f8;
 }
 .footer .navbar-nav{
 	margin: 15px;

@@ -17,6 +17,7 @@ if(function_exists( 'add_theme_support' )){
 if(function_exists('add_image_size')){
 	add_image_size( 'front-blog-feature', 420, 250, true);
 	add_image_size( 'feature',  2000, 600, array( 'left', 'top' ) );
+	add_image_size( 'recent-thumbnails',  359, 300, array( 'left', 'top' ) );
 
 }
 
@@ -96,4 +97,3 @@ function my_post_limit($limit) {
 	return $limit;
 } //end function my_post_limit
 
-?>

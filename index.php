@@ -12,8 +12,7 @@
         while ( $the_query->have_posts() ) : $the_query->the_post();
     ?>
     <a href="">
-      <?php the_post_thumbnail('feature');?>
-      <!--<img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">-->
+      <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive")); ?>
     </a>
     <div class="header-info">
       <h1><a href=" <?php the_permalink();?>"><?php the_title(); ?></a></h1>
