@@ -32,7 +32,9 @@
     <div class="col-md-4 col-xs-12">
       <div class="thumbnail">
         <a href="#">
-          <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
+          <div class="thumbnail-img-container">
+            <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/capATrench.jpg">
+          </div>
         </a>
         	<div class="well">
         		<span><i class="fa fa-user"></i> Dulani wilson</span>

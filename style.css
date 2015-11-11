@@ -165,6 +165,12 @@ p{
     margin: 10px 0 10px 0;
 }
 
+.thumbnail-img-container{
+    border: 0px solid black;
+    height: 210px;
+    overflow: hidden;
+}
+
 .well{
 	margin:0px;
 	padding: 5px;
