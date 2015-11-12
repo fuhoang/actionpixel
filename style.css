@@ -232,6 +232,13 @@ p{
     }
 }
 
+@media (max-width:992px) {
+    .thumbnail img {
+        width: 100%;
+    }
+}
+
+
 
 
 /* category page */
@@ -452,3 +459,7 @@ ul.page-numbers span.current {
 	border:0px solid black;
 	}
 
+.fb-comments{
+    border: 0px solid black;
+    width: 100%;
+}

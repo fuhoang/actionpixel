@@ -74,6 +74,12 @@
 			</div>
 		</div>
 	</div><!--end row-->
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<div class="fb-comments" data-width="100%"></div>
+
+		</div>
+	</div>
 
 </div><!--end container-->
 <?php get_footer(); ?>
