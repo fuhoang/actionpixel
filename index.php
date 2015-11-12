@@ -4,8 +4,10 @@
 <div class="container main">
   <div class="image-container">
 <?php
+  global $offset_id;
   $the_query = new WP_Query('posts_per_page=1');
   if ( $the_query->have_posts() ) :
+    $offset_id = get_the_ID();
 ?>
   <?php if ( is_home() ) : ?>
     <?php
@@ -28,20 +30,16 @@
 
 <div class="container main">
   <div class="row">
-	  <?php
-
+<?php
   if ( get_query_var('paged') ) { $paged = get_query_var('paged'); } else if ( get_query_var('page') ) {$paged = get_query_var('page'); } else {$paged = 1; }
-
     $temp = $wp_query;  // re-sets query
     $wp_query = null;   // re-sets query
-    $args = array( 'post_type' => array('post'), 'offset'=>1, 'orderby'=>'date', 'order'=>'DESC', 'posts_per_page' => 12, 'paged' => $paged);
+    $args = array( 'post_type' => array('post'), 'post__not_in'=>array($offset_id), 'orderby'=>'date', 'order'=>'DESC', 'posts_per_page' => 12, 'paged' => $paged);
     $wp_query = new WP_Query();
     $wp_query->query( $args );
     while ($wp_query->have_posts()) : $wp_query->the_post();
-
-
-					$cats = get_the_category();
-		?>
+			$cats = get_the_category();
+?>
     <div class="col-md-4 col-xs-12">
       <div class="thumbnail">
         <a href="<?php the_permalink(); ?>">

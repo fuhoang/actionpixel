@@ -4,6 +4,7 @@
 		<h1> <?php single_cat_title(); ?></h1>
 	</header>
 </div>
+
 <div class="container main">
   <div class="row">
     <?php

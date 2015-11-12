@@ -97,6 +97,7 @@ function my_post_limit($limit) {
 	return $limit;
 } //end function my_post_limit
 
+
 function paginate() {
 global $wp_query, $wp_rewrite;
 $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
