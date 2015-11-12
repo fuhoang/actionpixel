@@ -12,11 +12,22 @@
         foreach($categories as $category) {
           $cat_id = $category->cat_ID;
         }
-      }   
-      $wp_query = new WP_Query(array('cat' => $cat_id ));
+      }
+      if ( get_query_var('paged') ) { $paged = get_query_var('paged'); } else if ( get_query_var('page') ) {$paged = get_query_var('page'); } else {$paged = 1; }
+
+      $temp = $wp_query;  // re-sets query
+      $wp_query = null;   // re-sets query
+      $args = array('cat' => $cat_id,
+                    'orderby'=>'date',
+                    'order'=>'DESC',
+                    'posts_per_page' => 12,
+                    'paged' => $paged);
+      $wp_query = new WP_Query();
+      $wp_query->query( $args );
+
       if ( $wp_query->have_posts() ) :
         while($wp_query->have_posts()) : $wp_query->the_post();
-          $cats = get_the_category(); 
+          $cats = get_the_category();
     ?>
     <div class="col-md-4 col-xs-12">
       <div class="thumbnail">
@@ -39,11 +50,22 @@
     </div>
     <?php
       $i++;
-          if ($i%3 == 0) echo '</div><div class="row">';    
+          if ($i%3 == 0) echo '</div><div class="row">';
         endwhile;
       endif;
-      wp_reset_postdata();  
+      wp_reset_postdata();
     ?>
   </div><!-- End row -->
+  <div class="row">
+    <div class="col-md-12">
+
+      <?php
+        paginate();
+        $wp_query = null;
+        $wp_query = $temp; // Reset
+      ?>
+
+    </div>
+  </div>
 </div>
 <?php get_footer(); ?>

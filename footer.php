@@ -25,6 +25,7 @@
 <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src = "<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
 <script src = "<?php bloginfo('template_url') ; ?>/js/docs.min.js"></script>
+<script src = "<?php bloginfo('template_url') ; ?>/js/actionpixel.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

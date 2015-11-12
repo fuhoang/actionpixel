@@ -1,19 +1,19 @@
 <?php get_header(); ?>
 <div class="container main">
   <div class="image-container">
-	
+
   <?php the_post_thumbnail('feature', array( 'class'	=> "img-responsive")); ?>
- 		<div class="blog-header">
+ 	<div class="blog-header">
       <h1 class="blog-title"><?php the_title(); ?></h1>
-      <span class="lead"><p><?php the_subtitle(); ?></span>
-      <div class="well">
+      <span class="lead"><p><?php //the_subtitle(); ?></span>
+      <div class="blog-info">
        	<span><i class="fa fa-user"></i> <?php the_author(); ?></span>
         <span><i class="fa fa-calendar"></i> <?php the_time(' jS F, Y'); ?></span>
         <span><i class="fa fa-folder"></i> <?php $cat = get_the_category(); echo $cat[0]->name;?> </span>
       </div>
   	</div>
   </div>
-  
+
 	<div class="row">
 	  <div class="col-md-8 col-sm-12 col-xs-12 blog-main">
 	    <div class="blog-post">
@@ -23,7 +23,7 @@
 	  <div class = "col-md-4 col-sm-12 col-xs-12">
 	  	<div class="sidebar-container">
 	  		<?php
-	  		$post_id = get_the_ID();
+	  			$post_id = get_the_ID();
 				$tags = wp_get_post_tags($post_id);
 				if ($tags) {
 				$first_tag = $tags[0]->term_id;
