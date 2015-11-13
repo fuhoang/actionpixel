@@ -62,12 +62,21 @@
       'walker'            => new wp_bootstrap_navwalker())
     );
 ?>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://www.facebook.com/TheActionPixel"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://www.twitter.com/theactionpixel"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
-        <li><a href="http://youtube.com/"><i class="fa fa-youtube"></i> </a></li>
-      </ul>
+    <form action="<?php bloginfo('siteurl'); ?>" method="get" class="navbar-form navbar-right" role="search">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" id="s" name="s">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+      </div>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="https://www.facebook.com/TheActionPixel"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://www.twitter.com/theactionpixel"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
+      <li><a href="http://youtube.com/"><i class="fa fa-youtube"></i> </a></li>
+    </ul>
+
     </div>
   </div>
 </div>

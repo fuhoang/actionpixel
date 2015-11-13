@@ -95,7 +95,16 @@ p{
 	margin-bottom:0;
 }
 
+.social-media{
+    text-align: center;
+}
+
+.navbar-form{
+    padding: 5px 0 0 20px;
+}
+
 /*--------------------*/
+
 
 /*----header banner----*/
 .image-container{
@@ -238,7 +247,17 @@ p{
     }
 }
 
-
+/* page.php*/
+.page-wrapper{
+    min-height: 700px;
+    text-align: center;
+}
+.page-wrapper img{
+    padding: 20px 0 20px;
+}
+.page-wrapper p{
+    font-size: 1.2em;
+}
 
 
 /* category page */
@@ -407,15 +426,16 @@ ul.page-numbers span.current {
     background-color: #f8f8f8;
 }
 .footer .navbar-nav{
-	margin: 15px;
+	margin-top: 15px;
 }
 .footer .navbar-nav li a{
 	font-size: 0.8em;
 	display: inline;
 	margin-top:10px;
+    text-transform: uppercase;
+    color: #ff6600;
 }
 .footer .navbar-nav li a:hover{
-	color: #ff6600;
 	background-color: transparent;
 }
 
@@ -430,34 +450,26 @@ ul.page-numbers span.current {
 	background-color: #ccc;
 }
 
-.error_404{
-	background-color:#ccc;
-	width:auto;
+/* 404.php */
+
+.error-container{
+    padding: 20px;
+	background-color: #f8f8f8;
 	border-top-left-radius:5px;
 	border-bottom-left-radius:5px;
 	border-top-right-radius:5px;
 	border-bottom-right-radius:5px;
-	margin-top: 10px;
+    border: 1px solid #ff6600;
+	margin-top: 100px;
 }
-
-.error_404 span{
-	font-size: 2.5em;
-	font-weight: bold;
-	color:#ff6600;
+.error-container h1{
+    color:#ff6600;
+    font-weight: bold;
 }
+/*-------------*/
 
-.error_404 p{
-	font-size: 1.5em;
-	color:#000;
-}
+/* search.php */
 
-@media all and (max-width: 767px) {
-  .caption{
-	padding-left:0px;
-	float:left;
-	width:auto;
-	border:0px solid black;
-	}
 
 .fb-comments{
     border: 0px solid black;
