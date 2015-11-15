@@ -44,6 +44,11 @@ function new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+function new_excerpt_length($length) {
+	return 20;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
 
 function action_pixel_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -110,7 +115,10 @@ $pagination = array(
     'show_all' => true,
     'type' => 'list',
     'next_text' => '&raquo;',
-    'prev_text' => '&laquo;'
+    'prev_text' => '&laquo;',
+    'show_all' => False,
+    'end_size' => 1,
+    'mid_size' => 2
     );
 
 if( $wp_rewrite->using_permalinks() )

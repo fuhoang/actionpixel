@@ -5,7 +5,7 @@
   <?php the_post_thumbnail('feature', array( 'class'	=> "img-responsive")); ?>
  	<div class="blog-header">
       <h1 class="blog-title"><?php the_title(); ?></h1>
-      <span class="lead"><p><?php //the_subtitle(); ?></span>
+      <span class="lead"><p><?php the_subtitle(); ?></span>
       <div class="blog-info">
        	<span><i class="fa fa-user"></i> <?php the_author(); ?></span>
         <span><i class="fa fa-calendar"></i> <?php the_time(' jS F, Y'); ?></span>

@@ -73,6 +73,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a href="https://www.facebook.com/TheActionPixel"><i class="fa fa-facebook"></i></a></li>
       <li><a href="https://www.twitter.com/theactionpixel"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.theactionpixel.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
       <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
       <li><a href="http://youtube.com/"><i class="fa fa-youtube"></i> </a></li>
     </ul>
