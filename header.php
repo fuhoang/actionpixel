@@ -28,10 +28,17 @@
 
   <?php if(is_single()){
   ?>
-  <meta property="og:url" content="URL" />
-  <meta property="og:title" content="TITLE" />
-  <meta property="og:description" content="DESC" />
-  <meta property="og:image" content="IMG" />
+  <meta property="og:site_name" content="The Action Pixel"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="<?php the_permalink(); ?>" />
+  <meta property="og:title" content="<?php the_title(); ?>" />
+  <meta property="og:description" content="<?php $excerpt = strip_tags(get_the_excerpt('...'));
+        echo $excerpt;?>" />
+  <meta property="og:image" content="<?php
+$image_id = get_post_thumbnail_id();
+$image_url = wp_get_attachment_image_src($image_id,'large', true);
+echo $image_url[0];
+  ?>" />
   <?php  
   }?>  
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
