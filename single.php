@@ -76,8 +76,7 @@
 	</div><!--end row-->
 	<div class="row">
 		<div class="col-md-12 col-xs-12">
-			<div class="fb-comments" data-width="100%"></div>
-
+			<div class="fb-comments" data-width="100%" data-href="<?php the_permalink(); ?>" data-numposts="10"></div>
 		</div>
 	</div>
 

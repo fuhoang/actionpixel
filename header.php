@@ -22,6 +22,18 @@
 		 echo "The Action Pixel. A curation of original, innovative and informative content, giving insight into the animation, graphic novel and gaming cultures. We are Entertainment On T.A.P. #TheActionPixel #EntertainmentOnTAP";
 		}
 		?>"/>
+
+  <meta property="fb:app_id" content="623410471104207" />
+  <meta property="fb:admins" content="100002010141906"/> 
+
+  <?php if(is_single()){
+  ?>
+  <meta property="og:url" content="URL" />
+  <meta property="og:title" content="TITLE" />
+  <meta property="og:description" content="DESC" />
+  <meta property="og:image" content="IMG" />
+  <?php  
+  }?>  
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<link href = "<?php bloginfo('stylesheet_url'); ?>" rel = "stylesheet">
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
