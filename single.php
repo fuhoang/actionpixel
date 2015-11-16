@@ -5,7 +5,7 @@
   <?php the_post_thumbnail('feature', array( 'class'	=> "img-responsive")); ?>
  	<div class="blog-header">
       <h1 class="blog-title"><?php the_title(); ?></h1>
-      <span class="lead"><p><?php //the_subtitle(); ?></span>
+      <span class="subtitle"><?php the_subtitle(); ?></span>
       <div class="blog-info">
        	<span><i class="fa fa-user"></i> <?php the_author(); ?></span>
         <span><i class="fa fa-calendar"></i> <?php the_time(' jS F, Y'); ?></span>
@@ -76,8 +76,7 @@
 	</div><!--end row-->
 	<div class="row">
 		<div class="col-md-12 col-xs-12">
-			<div class="fb-comments" data-width="100%"></div>
-
+			<div class="fb-comments" data-width="100%" data-href="<?php the_permalink(); ?>" data-numposts="10"></div>
 		</div>
 	</div>
 

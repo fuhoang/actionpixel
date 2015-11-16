@@ -18,7 +18,7 @@
     </a>
     <div class="header-info">
       <h1><a href=" <?php the_permalink();?>"><?php the_title(); ?></a></h1>
-      <p><?php the_excerpt('...'); ?></p>
+      <span class="subtitle"><?php the_subtitle(); ?></span>
       <p><a class="btn btn-sm ap-btn" href="<?php the_permalink();?>" role="button">Read</a></p>
     </div>
     <?php wp_reset_postdata(); ?>
