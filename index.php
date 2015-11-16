@@ -30,6 +30,23 @@
 
 <div class="container main">
   <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="leaderboard">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- top leader responsive -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2424508156013330"
+             data-ad-slot="4266870471"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      
+    </div>
+  </div>
+  <div class="row">
 <?php
   if ( get_query_var('paged') ) { $paged = get_query_var('paged'); } else if ( get_query_var('page') ) {$paged = get_query_var('page'); } else {$paged = 1; }
     $temp = $wp_query;  // re-sets query
@@ -64,6 +81,23 @@
     			if ($i%3 == 0) echo '</div><div class="row">';
         endwhile;?>
   </div><!-- End row -->
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="leaderboard">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- bottom leaderboard -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2424508156013330"
+             data-ad-slot="2290609674"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-12">
 

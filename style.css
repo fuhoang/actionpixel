@@ -543,3 +543,13 @@ ul.page-numbers span.current {
     width: 100%;
     height: 100%;
 }
+
+
+/* advertise */
+
+.leaderboard{
+    border: 0px solid black;
+    width: 100%;
+    height: auto;
+}
+
