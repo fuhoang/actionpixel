@@ -238,6 +238,32 @@ p{
 	color:#ff6600;
 }
 
+@media (min-width:320px) {
+    .thumbnail{
+        border: 0;
+    }
+    .thumbnail img {
+        width: 100%;
+    }
+    .thumbnail-img-container{
+        border: 0px solid black;
+        height: auto;
+    }
+}
+
+@media (max-width:320px) {
+    .thumbnail{
+        border: 0;
+    }
+    .thumbnail img {
+        width: 100%;
+    }
+    .thumbnail-img-container{
+        border: 0px solid black;
+        height: auto;
+    }
+}
+
 @media (max-width:768px) {
     .thumbnail{
         border: 0;

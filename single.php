@@ -23,6 +23,16 @@
 	  </div>
 	  <div class = "col-md-4 col-sm-12 col-xs-12">
 	  	<div class="sidebar-container">
+	  	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Action pixel reponsive -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-2424508156013330"
+		     data-ad-slot="3449915270"
+		     data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
 	  		<?php
 	  			$post_id = get_the_ID();
 				$tags = wp_get_post_tags($post_id);
@@ -72,6 +82,16 @@
 				<?php endwhile;
 				wp_reset_query();?>
 				</ul>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Action pixel reponsive 2 -->
+			<ins class="adsbygoogle"
+				style="display:block"
+				data-ad-client="ca-pub-2424508156013330"
+				data-ad-slot="7461312473"
+				data-ad-format="auto"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
 			</div>
 		</div>
 	</div><!--end row-->
