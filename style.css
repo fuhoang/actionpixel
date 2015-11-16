@@ -323,6 +323,7 @@ p{
 
 
 .blog-post{
+    width: 100%;
     margin: 40px 0 40px;
     font-size: 16px;
 }
@@ -494,7 +495,25 @@ ul.page-numbers span.current {
 /* search.php */
 
 
+/* fb-comment */
 .fb-comments{
     border: 0px solid black;
     width: 100%;
+}
+
+
+/* Embeded video reponsive */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe, .video-container object,
+.video-container embed, .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
