@@ -19,6 +19,7 @@
 	    <div class="blog-post">
 	    	<?php the_content();?>
 	    </div><!-- /.blog-post -->
+		<div class="fb-comments" data-width="100%" data-href="<?php the_permalink(); ?>" data-numposts="10"></div>
 	  </div>
 	  <div class = "col-md-4 col-sm-12 col-xs-12">
 	  	<div class="sidebar-container">
@@ -74,11 +75,5 @@
 			</div>
 		</div>
 	</div><!--end row-->
-	<div class="row">
-		<div class="col-md-12 col-xs-12">
-			<div class="fb-comments" data-width="100%" data-href="<?php the_permalink(); ?>" data-numposts="10"></div>
-		</div>
-	</div>
-
 </div><!--end container-->
 <?php get_footer(); ?>
