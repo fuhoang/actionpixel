@@ -106,12 +106,7 @@ echo $image_url[0];
           <input type="text" class="form-control pull-right" id="s" name="s" placeholder="Search">
           <div class="input-group-btn">
             <span class="input-group-btn">
-              <button type="reset" class="btn btn-default">
-                <span class="glyphicon glyphicon-remove">
-                  <span class="sr-only">Close</span>
-                </span>
-              </button>
-              <button type="submit" class="btn btn-default">
+              <button type="submit" class="btn-search btn btn-default">
                 <span class="glyphicon glyphicon-search">
                   <span class="sr-only">Search</span>
                 </span>

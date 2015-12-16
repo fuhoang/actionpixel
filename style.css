@@ -105,12 +105,14 @@ p{
     text-align: center;
     padding-left: 40px;
     font-size: 14px;
+    display: block;
 }
 .navbar-form{
     float: right;
     display: block;
     padding-top: 9px;
     font-size: 14px;
+    z-index: 9999;
 }
 
 .navbar-form .input-group input{
