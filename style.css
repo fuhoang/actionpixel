@@ -101,14 +101,28 @@ p{
 .navbar{
     margin-bottom:0;
 }
-
 .social-media{
     text-align: center;
+    padding-left: 40px;
+    font-size: 14px;
+}
+.navbar-form{
+    float: right;
+    display: block;
+    padding-top: 9px;
+    font-size: 14px;
 }
 
-.navbar-form{
-    padding: 5px 0 0 20px;
+.navbar-form .input-group input{
+    display: none;
 }
+
+.navbar-form .btn-default{
+    background: #262626;
+    border: 0;
+    color: #777;
+}
+
 
 /*--------------------*/
 

@@ -24,7 +24,7 @@
 		?>"/>
 
   <meta property="fb:app_id" content="623410471104207" />
-  <meta property="fb:admins" content="100002010141906"/> 
+  <meta property="fb:admins" content="100002010141906"/>
 
   <?php if(is_single()){
   ?>
@@ -39,8 +39,8 @@ $image_id = get_post_thumbnail_id();
 $image_url = wp_get_attachment_image_src($image_id,'large', true);
 echo $image_url[0];
   ?>" />
-  <?php  
-  }?>  
+  <?php
+  }?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<link href = "<?php bloginfo('stylesheet_url'); ?>" rel = "stylesheet">
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
@@ -82,32 +82,44 @@ echo $image_url[0];
       </button>
       <a class="brand" href="<?php echo site_url() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="the action pixel"></a>
     </div>
-  <div id="navbar" class="navbar-collapse collapse">
-<?php
-    wp_nav_menu( array(
-      'menu'              => 'primary',
-      'theme_location'    => 'primary',
-      'depth'             => 2,
-      'menu_class'        => 'nav navbar-nav',
-      'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-      'walker'            => new wp_bootstrap_navwalker())
-    );
-?>
-    <form action="<?php bloginfo('siteurl'); ?>" method="get" class="navbar-form navbar-right" role="search">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" id="s" name="s">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+    <div id="navbar" class="navbar-collapse collapse">
+  <?php
+      wp_nav_menu( array(
+        'menu'              => 'primary',
+        'theme_location'    => 'primary',
+        'depth'             => 2,
+        'menu_class'        => 'nav navbar-nav navbar-left',
+        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+        'walker'            => new wp_bootstrap_navwalker())
+      );
+  ?>
+      <ul class="nav navbar-nav navbar social-media">
+        <li><a href="https://www.facebook.com/TheActionPixel"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.twitter.com/theactionpixel"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.theactionpixel.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
+        <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
+        <li><a href="http://youtube.com/"><i class="fa fa-youtube"></i> </a></li>
+      </ul>
+
+      <form class="navbar-form" action="<?php bloginfo('siteurl'); ?>" method="get" role="search">
+        <div class="input-group">
+          <input type="text" class="form-control pull-right" id="s" name="s" placeholder="Search">
+          <div class="input-group-btn">
+            <span class="input-group-btn">
+              <button type="reset" class="btn btn-default">
+                <span class="glyphicon glyphicon-remove">
+                  <span class="sr-only">Close</span>
+                </span>
+              </button>
+              <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search">
+                  <span class="sr-only">Search</span>
+                </span>
+              </button>
+            </span>
+          </div>
         </div>
-      </div>
-    </form>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="https://www.facebook.com/TheActionPixel"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="https://www.twitter.com/theactionpixel"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="https://www.theactionpixel.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
-      <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
-      <li><a href="http://youtube.com/"><i class="fa fa-youtube"></i> </a></li>
-    </ul>
+      </form>
 
     </div>
   </div>
