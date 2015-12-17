@@ -72,7 +72,10 @@ echo $image_url[0];
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<nav class = "navbar navbar-default navbar-static-top">
+<div class="container">
+</div>
+<div class = "navbar navbar-default navbar-static-top">
+>>>>>>> Stashed changes
   <div class = "container">
 
     <div class="navbar-header">
@@ -90,12 +93,20 @@ echo $image_url[0];
         'menu'              => 'primary',
         'theme_location'    => 'primary',
         'depth'             => 2,
-        'menu_class'        => 'nav navbar-nav navbar-right',
+        'menu_class'        => 'nav navbar-nav',
         'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
         'walker'            => new wp_bootstrap_navwalker())
       );
   ?>
-<!--
+
+      <ul class="nav navbar-nav social-media">
+        <li><a href="https://www.facebook.com/TheActionPixel"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.twitter.com/theactionpixel"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.theactionpixel.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
+        <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
+        <li><a href="http://youtube.com/"><i class="fa fa-youtube"></i> </a></li>
+      </ul>
+
       <form class="navbar-form" action="<?php bloginfo('siteurl'); ?>" method="get" role="search">
         <div class="input-group">
 
@@ -113,35 +124,7 @@ echo $image_url[0];
           </div>
         </div>
       </form>
--->
+
     </div>
   </div>
 </nav>
-<div class="container main">
-
-  <div class="row">
-
-    <div class="col-sm-12 col-md-6">
-      <div class="social-media">
-        <ul class="list-inline">
-          <li><a href="https://www.facebook.com/TheActionPixel"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://www.twitter.com/theactionpixel"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="https://www.theactionpixel.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
-          <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
-          <li><a href="http://youtube.com/"><i class="fa fa-youtube"></i> </a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="col-sm-12 col-md-6">
-      <div class="search-toggle">
-        <form class="searchbox" action="<?php bloginfo('siteurl'); ?>" method="get" role="search">
-          <input type="search" placeholder="Search......" name="s" id="s" class="searchbox-input" onkeyup="buttonUp();" required>
-          <input type="submit" class="searchbox-submit" value="GO">
-          <span class="searchbox-icon"><i class="fa fa-search"></i></span>
-        </form>
-      </div>
-    </div>
-
-  </div><!--end row-->
-</div><!-- container-->

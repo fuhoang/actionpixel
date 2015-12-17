@@ -95,39 +95,115 @@ p{
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus{
     color:#ff6600;
-    padding: 20px;
     background-color: #f5f5f5;
 }
 .navbar{
+    position: relative;
     margin-bottom:0;
 }
-.social-media{
-    text-align: center;
-    padding-left: 40px;
-    font-size: 14px;
-    display: block;
-}
-.navbar-form{
+
+/* search nav*/
+.search-toggle{
     float: right;
-    display: block;
-    padding-top: 9px;
-    font-size: 14px;
-    z-index: 9999;
-}
-
-.navbar-form .input-group input{
-    display: none;
-}
-
-.navbar-form .btn-default{
-    background: #262626;
-    border: 0;
-    color: #777;
+    width: 100%;
+    display:inline-block;
 }
 
 
+.searchbox{
+    position:relative;
+    min-width:50px;
+    width:0%;
+    height:50px;
+    float:right;
+    overflow:hidden;
+
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+}
+.searchbox-input{
+    top:0;
+    right:0;
+    border:0;
+    outline:0;
+    background:#dcddd8;
+    width:100%;
+    height:50px;
+    margin:0;
+    padding:0px 55px 0px 20px;
+    font-size:20px;
+    color:red;
+}
+.searchbox-input::-webkit-input-placeholder {
+    color: #d74b4b;
+}
+.searchbox-input:-moz-placeholder {
+    color: #d74b4b;
+}
+.searchbox-input::-moz-placeholder {
+    color: #d74b4b;
+}
+.searchbox-input:-ms-input-placeholder {
+    color: #d74b4b;
+}
+
+.searchbox-icon,
+.searchbox-submit{
+    width:50px;
+    height:50px;
+    display:block;
+    position:absolute;
+    top:0;
+    font-family:verdana;
+    font-size:22px;
+    right:0;
+    padding:0;
+    margin:0;
+    border:0;
+    outline:0;
+    line-height:50px;
+    text-align:center;
+    cursor:pointer;
+    color:#dcddd8;
+    background:#172b3c;
+}
+.searchbox-open{
+    width:100%;
+
+}
+
+@media (max-width:768px) {
+    .search-toggle{
+
+        width: 100%;
+    }
+}
 /*--------------------*/
 
+/* social top main */
+.social-media{
+    display:inline-block;
+    font-size: 18px;
+    padding-top:5px;
+}
+.social-media li{
+    text-align: center;
+    padding:0px 20px;
+}
+.social-media li a i{
+    color:#777;
+}
+
+@media (max-width:768px) {
+    .social-media{
+        position: relative;
+        margin: 0 auto;
+    }
+}
+/*---------------------*/
 
 /*----header banner----*/
 .image-container{
