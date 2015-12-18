@@ -123,7 +123,7 @@ echo $image_url[0];
 
     <div class="col-sm-12 col-md-6">
       <div class="social-media">
-        <ul class="list-inline">
+        <ul class="list-inline center">
           <li><a href="https://www.facebook.com/TheActionPixel"><i class="fa fa-facebook"></i></a></li>
           <li><a href="https://www.twitter.com/theactionpixel"><i class="fa fa-twitter"></i></a></li>
           <li><a href="https://www.theactionpixel.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
