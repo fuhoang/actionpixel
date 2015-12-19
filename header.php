@@ -62,6 +62,7 @@ echo $image_url[0];
 </head>
 
 <body>
+
 <!--facebook app -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -70,7 +71,8 @@ echo $image_url[0];
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=623410471104207";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+</script>
 
 <nav class = "navbar navbar-default navbar-static-top">
   <div class = "container">
@@ -95,28 +97,11 @@ echo $image_url[0];
         'walker'            => new wp_bootstrap_navwalker())
       );
   ?>
-<!--
-      <form class="navbar-form" action="<?php bloginfo('siteurl'); ?>" method="get" role="search">
-        <div class="input-group">
 
-          <input type="text" class="form-control pull-right" id="s" name="s" placeholder="Search">
-          <div class="input-group-btn">
-
-            <span class="input-group-btn">
-              <button type="submit" class="btn-search btn btn-default">
-                <span class="glyphicon glyphicon-search">
-                  <span class="sr-only">Search</span>
-                </span>
-              </button>
-            </span>
-
-          </div>
-        </div>
-      </form>
--->
     </div>
   </div>
 </nav>
+
 <div class="container main">
 
   <div class="row">
