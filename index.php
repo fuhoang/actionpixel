@@ -43,7 +43,7 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>
-      
+
     </div>
   </div>
   <div class="row">
@@ -60,8 +60,10 @@
     <div class="col-md-4 col-xs-12">
       <div class="thumbnail">
         <a href="<?php the_permalink(); ?>">
-          <div class="thumbnail-img-container">
-          <?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'img-responsive' ) );?>
+          <div class="thumbnail-img-container hover01">
+            <figure>
+              <?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'img-responsive' ) );?>
+            </figure>
           </div>
         </a>
         	<div class="well">
@@ -95,7 +97,7 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>
-      
+
     </div>
   </div>
   <div class="row">
