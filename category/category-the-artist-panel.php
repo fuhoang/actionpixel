@@ -1,7 +1,7 @@
 <div class="container main">
   <div class="image-container">
 
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/TAP10_BANNER.jpg" class="img-responsive">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/THEARTISTPANEL_BANNER.jpg" class="img-responsive">
     <div class="header-info">
       <h1></h1>
       <span class="subtitle"></span>
