@@ -2,7 +2,7 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 
 <div class="container main">
-  <div class="image-container">
+  <div class="image-container hover01">
 <?php
   global $offset_id;
   $the_query = new WP_Query('posts_per_page=1');
@@ -14,7 +14,9 @@
         while ( $the_query->have_posts() ) : $the_query->the_post();
     ?>
     <a href="<?php the_permalink(); ?>">
+      <figure>
       <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive")); ?>
+      </figure>
     </a>
     <div class="header-info">
       <h1><a href=" <?php the_permalink();?>"><?php the_title(); ?></a></h1>

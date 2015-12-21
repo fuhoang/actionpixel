@@ -440,6 +440,8 @@ p{
 .hover01 figure:hover img {
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
+    opacity: 0.5;
+    filter: alpha(opacity=30);
 }
 
 
