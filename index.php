@@ -69,9 +69,9 @@
           </div>
         </a>
         	<div class="well">
-        		<span><i class="fa fa-user"></i> <?php the_author(); ?></span>
-        		<span><i class="fa fa-calendar"></i> <?php the_time('jS M,  Y'); ?></span>
-        		<span><i class="fa fa-folder"></i> <?php echo $cats[0]->name ?> </span>
+        		<i class="fa fa-user"> <?php the_author(); ?></i>
+        		<i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+        		<i class="fa fa-folder"> <?php echo $cats[0]->name ?> </i>
         	</div>
           <div class="caption">
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>

@@ -7,7 +7,6 @@ Author URI: http://theactionpixel.com
 Version: 2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: twentyfifteen
 */
 
 @import url('css/bootstrap.min.css');
@@ -370,14 +369,15 @@ p{
 }
 
 .well{
-    margin:0px;
-    padding: 5px;
+    margin: 0;
+    padding: 20px;
     border:0;
+    text-align: center;
+
 }
-.well span {
+.well i{
     color: #808080;
     padding: 10px 5px 10px;
-    display: inline-block;
     font-size:14px;
 }
 
@@ -416,12 +416,7 @@ p{
     .thumbnail img {
         width: 100%;
     }
-    .well span {
-      color: #808080;
-      padding: 10px 5px 10px;
-      display: inline-block;
-      font-size:10px;
-    }
+
 }
 
 @media (max-width:992px) {
