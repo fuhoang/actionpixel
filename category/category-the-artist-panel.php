@@ -3,8 +3,9 @@
 
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/THEARTISTPANEL_BANNER.jpg" class="img-responsive">
     <div class="header-info">
-      <h1></h1>
-      <span class="subtitle"></span>
+      <h1>The Artist Panel</h1>
+      <span class="subtitle">Behind every pixel, there’s a creator. Meet a few of them here. Interviews + Q & A’s with flair
+      TheArtistPanel</span>
     </div>
   </div>
 </div>

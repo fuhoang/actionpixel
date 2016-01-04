@@ -12,7 +12,7 @@
 <head>
   <title><?php wp_title( '|', true, 'right'); ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="the action pixel, action pixel, comics, animation, gaming, 3D, pixels, media, news, publishing, entertainment, entertainment on T.A.P " />
+	<meta name="keywords" content="the action pixel, action pixel, action, pixel, comics, animation, gaming, 3D, pixels, media, news, publishing, entertainment, entertainment on T.A.P " />
 	<meta name="description" content="<?php if( is_single() ){
 			while(have_posts()) : the_post();
           		$excerpt = strip_tags(get_the_excerpt('...'));

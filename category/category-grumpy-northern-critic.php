@@ -3,8 +3,9 @@
 
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/GNC_BANNER.jpg" class="img-responsive">
     <div class="header-info">
-      <h1></h1>
-      <span class="subtitle"></span>
+      <h1>Grumpy Northern Critic</h1>
+      <span class="subtitle">It is said no one ever built a statue for a critic.
+      The pigeons would disagree. #GrumpyNorthernCritic #GNC</span>
     </div>
   </div>
 </div>
