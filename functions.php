@@ -138,3 +138,79 @@ if( !empty($wp_query->query_vars['s']) )
 
 echo paginate_links( $pagination );
 }
+
+
+function add_author_meta() {
+
+    if (is_single()){
+        global $post;
+        $author = get_the_author_meta('user_nicename', $post->post_author);
+        echo "<meta name=\"author\" content=\"$author\">";
+    }
+}
+add_action( 'wp_enqueue_scripts', 'add_author_meta' );
+
+
+function wpse_71766_seo()
+{
+    if ( is_single() && $post_id = get_queried_object_id() ) {
+
+        if ( ! $description = get_post_field( 'post_excerpt', $post_id ) )
+            $description = get_post_field( 'post_content', $post_id );
+
+        $description = trim( wp_strip_all_tags( $description, true ) );
+        $description = substr( $description, 0, 150 );
+
+        $keywords = array();
+        if ( $categories = get_the_category( $post_id ) ) {
+            foreach ( $categories as $category )
+                $keywords[] = $category->name;
+        }
+
+        if ( $tags = get_the_tags( $post_id ) ) {
+            foreach ( $tags as $tag )
+                $keywords[] = $tag->name;
+        }
+
+        if ( $description )
+            printf( '<meta name="description" content="%s" />' . "\n\t", esc_attr( $description ) );
+        if ( $keywords ){
+            printf( '<meta name="keywords" content="%s" />' . "\n\t", esc_attr( implode( ', ', $keywords ) ) );
+        }
+    }else{
+        printf( '  <meta name="keywords" content="the action pixel, action pixel, action, pixel, comics, animation, gaming, 3D, pixels, media, news, publishing, entertainment, entertainment on T.A.P"/>' );
+        printf( '  <meta name="description" content="The Action Pixel. A curation of original, innovative and informative content, giving insight into the animation, graphic novel and gaming cultures. We are Entertainment On T.A.P. #TheActionPixel #EntertainmentOnTAP"/>
+' );
+
+
+    }
+}
+add_action( 'wp_enqueue_scripts', 'wpse_71766_seo' );
+
+
+function facebook_meta_tags() {
+  if (is_single()) {
+    ?>
+        <meta property="og:title" content="<?php the_title(); ?>"/>
+        <meta property="og:description" content="<?php
+
+        while(have_posts()) : the_post();
+            $excerpt = strip_tags(get_the_excerpt('...'));
+            echo $excerpt;
+        endwhile; wp_reset_query(); ?>" />
+
+        <meta property="og:url" content="<?php the_permalink(); ?>"/>
+
+        <?php $fb_image = wp_get_attachment_image_src(get_post_thumbnail_id( get_the_ID() ), 'thumbnail'); ?>
+        <?php if ($fb_image) : ?>
+            <meta property="og:image" content="<?php echo $fb_image[0]; ?>" />
+        <?php endif; ?>
+        <meta property="og:type" content="<?php
+            if (is_single() || is_page()) { echo "article"; } else { echo "website";} ?>"
+        />
+        <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
+
+<?php
+  }
+}
+add_action('wp_enqueue_scripts', 'facebook_meta_tags');

@@ -12,47 +12,11 @@
 <head>
   <title><?php wp_title( '|', true, 'right'); ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="<?php
-  if(is_single()){
-    if ( $tags = get_the_tags( $post_id ) ) {
-      foreach ( $tags as $tag )
-        $keywords[] = $tag->name;
-      }
-    echo esc_attr( implode( ', ', $keywords ) );
-  }else{
-    echo "the action pixel, action pixel, action, pixel, comics, animation, gaming, 3D, pixels, media, news, publishing, entertainment, entertainment on T.A.P";
-	}
-  ?> "/>
-
-  <meta name="description" content="<?php if( is_single() ){
-			while(have_posts()) : the_post();
-          		$excerpt = strip_tags(get_the_excerpt('...'));
-				echo $excerpt;
-			endwhile; wp_reset_query();
-		}else{
-		 echo "The Action Pixel. A curation of original, innovative and informative content, giving insight into the animation, graphic novel and gaming cultures. We are Entertainment On T.A.P. #TheActionPixel #EntertainmentOnTAP";
-		}
-		?>"/>
-
   <meta property="fb:app_id" content="623410471104207" />
   <meta property="fb:admins" content="100002010141906"/>
-
-  <?php if(is_single()){
-  ?>
-  <meta property="og:site_name" content="The Action Pixel"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="<?php the_permalink(); ?>" />
-  <meta property="og:title" content="<?php the_title(); ?>" />
-  <meta property="og:description" content="<?php $excerpt = strip_tags(get_the_excerpt('...'));
-        echo $excerpt;?>" />
-  <meta property="og:image" content="<?php
-$image_id = get_post_thumbnail_id();
-$image_url = wp_get_attachment_image_src($image_id,'large', true);
-echo $image_url[0];
-  ?>" />
-  <?php
-  }?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+
+  <!-- style css -->
 	<link href = "<?php bloginfo('stylesheet_url'); ?>" rel = "stylesheet">
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
