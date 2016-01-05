@@ -370,14 +370,14 @@ p{
 
 .well{
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     border:0;
     text-align: center;
 
 }
 .well i{
     color: #808080;
-    padding: 10px 5px 10px;
+    padding: 5px 5px 5px;
     font-size:14px;
 }
 
