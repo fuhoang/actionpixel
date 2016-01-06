@@ -145,7 +145,7 @@ function add_author_meta() {
     if (is_single()){
         global $post;
         $author = get_the_author_meta('user_nicename', $post->post_author);
-        echo "<meta name=\"author\" content=\"$author\">";
+        echo "<meta name=\"author\" content=\"$author\"/>";
     }
 }
 add_action( 'wp_enqueue_scripts', 'add_author_meta' );
@@ -178,8 +178,8 @@ function wpse_71766_seo()
             printf( '<meta name="keywords" content="%s" />' . "\n\t", esc_attr( implode( ', ', $keywords ) ) );
         }
     }else{
-        printf( '  <meta name="keywords" content="the action pixel, action pixel, action, pixel, comics, animation, gaming, 3D, pixels, media, news, publishing, entertainment, entertainment on T.A.P"/>' );
-        printf( '  <meta name="description" content="The Action Pixel. A curation of original, innovative and informative content, giving insight into the animation, graphic novel and gaming cultures. We are Entertainment On T.A.P. #TheActionPixel #EntertainmentOnTAP"/>
+        printf( '<meta name="keywords" content="the action pixel, action pixel, action, pixel, comics, animation, gaming, 3D, pixels, media, news, publishing, entertainment, entertainment on T.A.P"/>' );
+        printf( '<meta name="description" content="The Action Pixel. A curation of original, innovative and informative content, giving insight into the animation, graphic novel and gaming cultures. We are Entertainment On T.A.P. #TheActionPixel #EntertainmentOnTAP"/>
 ' );
 
 
@@ -214,3 +214,25 @@ function facebook_meta_tags() {
   }
 }
 add_action('wp_enqueue_scripts', 'facebook_meta_tags');
+
+
+function twitter_meta_tags() {
+    if(is_single()){
+        ?>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@TheActionPixel" />
+        <meta name="twitter:title" content="<?php the_title(); ?>" />
+        <meta name="twitter:description" content="<?php
+        while(have_posts()) : the_post();
+            $excerpt = strip_tags(get_the_excerpt('...'));
+            echo $excerpt;
+        endwhile; wp_reset_query(); ?>" />
+        <?php $tw_image = wp_get_attachment_image_src(get_post_thumbnail_id( get_the_ID() ), 'thumbnail'); ?>
+        <?php if ($tw_image) : ?>
+        <meta name="twitter:image" content="<?php echo $tw_image[0]; ?>" />
+        <?php endif; ?>
+<?php
+    }
+}
+add_action('wp_enqueue_scripts', 'twitter_meta_tags');
+
