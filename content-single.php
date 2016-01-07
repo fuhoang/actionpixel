@@ -6,7 +6,7 @@
       <div class="blog-info">
         <span><i class="fa fa-user"></i> <?php the_author(); ?></span>
         <span><i class="fa fa-calendar"></i> <?php the_time(' jS F, Y'); ?></span>
-        <span><i class="fa fa-folder"></i> <?php $cat = get_the_category(); echo $cat[0]->name;?> </span>
+        <span><i class="fa fa-folder"></i> <?php echo get_the_category_list(', '); ?></span>
       </div>
     </div>
   </div>

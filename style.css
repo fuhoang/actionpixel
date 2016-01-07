@@ -513,6 +513,10 @@ p{
     text-align: center;
 }
 
+.blog-info span a{
+    color: #808080;
+}
+
 
 .blog-post{
     width: 100%;
