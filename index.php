@@ -57,7 +57,6 @@
     $wp_query = new WP_Query();
     $wp_query->query( $args );
     while ($wp_query->have_posts()) : $wp_query->the_post();
-			$cats = get_the_category();
 ?>
     <div class="col-md-4 col-xs-12">
       <div class="thumbnail">
@@ -69,9 +68,10 @@
           </div>
         </a>
         	<div class="well">
+
         		<i class="fa fa-user"> <?php the_author(); ?></i>
         		<i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
-        		<i class="fa fa-folder"> <?php echo $cats[0]->name ?> </i>
+        		<i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
         	</div>
           <div class="caption">
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
