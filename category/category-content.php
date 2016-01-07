@@ -1,17 +1,14 @@
 <!-- category content -->
 <div class="row">
   <?php
-    $categories = get_the_category();
-    if($categories){
-      foreach($categories as $category) {
-        $cat_id = $category->cat_ID;
-      }
-    }
+    $cat = get_query_var('cat');
+    $yourcat = get_category ($cat);
+
     if ( get_query_var('paged') ) { $paged = get_query_var('paged'); } else if ( get_query_var('page') ) {$paged = get_query_var('page'); } else {$paged = 1; }
 
     $temp = $wp_query;  // re-sets query
     $wp_query = null;   // re-sets query
-    $args = array('cat' => $cat_id,
+    $args = array('category_name' => $yourcat->slug,
                   'orderby'=>'date',
                   'order'=>'DESC',
                   'posts_per_page' => 12,
