@@ -236,3 +236,8 @@ function twitter_meta_tags() {
 }
 add_action('wp_enqueue_scripts', 'twitter_meta_tags');
 
+
+
+if (function_exists('add_theme_support')) {
+    add_theme_support( 'post-formats', array( 'video' ) );
+}

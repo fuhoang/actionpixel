@@ -357,6 +357,32 @@ p{
     border:0px solid #ccc;
 }
 
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    border:0px solid #ccc;
+    width: 853px;
+    padding: 0;
+}
+
+.col-centered .blog-info{
+    margin: 10px 0 10px;
+}
+
+.video-row{
+    margin: 40px 0 40px;
+}
+
+.video-header h1{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+    line-height:110%;
+    margin-bottom: 10px;
+}
+
+
 .thumbnail{
     padding: 0;
     margin: 10px 0 10px 0;
