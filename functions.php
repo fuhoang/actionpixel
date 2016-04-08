@@ -36,7 +36,7 @@ function alx_embed_html( $html ) {
 add_filter( 'embed_oembed_html', 'alx_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
 
-
+/*
 if(function_exists(register_sidebar)){
 	register_sidebar( array(
 		'name' => 'Sidebar Widgets',
@@ -47,7 +47,7 @@ if(function_exists(register_sidebar)){
 
 	));
 }
-
+*/
 function new_excerpt_more( $more ) {
 	return ' ...';
 }
@@ -177,6 +177,9 @@ function wpse_71766_seo()
         if ( $keywords ){
             printf( '<meta name="keywords" content="%s" />' . "\n\t", esc_attr( implode( ', ', $keywords ) ) );
         }
+    }elseif( is_category() ){
+        printf( '<meta name="keywords" content="the action pixel, action pixel, action, pixel, comics, animation, gaming, 3D, pixels, media, news, publishing, entertainment, entertainment on T.A.P"/>' );
+        printf( '<meta name="description" content="%s" />' . "\n\t", strip_tags(category_description()) );
     }else{
         printf( '<meta name="keywords" content="the action pixel, action pixel, action, pixel, comics, animation, gaming, 3D, pixels, media, news, publishing, entertainment, entertainment on T.A.P"/>' );
         printf( '<meta name="description" content="The Action Pixel. A curation of original, innovative and informative content, giving insight into the animation, graphic novel and gaming cultures. We are Entertainment On T.A.P. #TheActionPixel #EntertainmentOnTAP"/>

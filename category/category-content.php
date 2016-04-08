@@ -17,6 +17,7 @@
     $wp_query->query( $args );
 
     if ( $wp_query->have_posts() ) :
+      $i=0;
       while($wp_query->have_posts()) : $wp_query->the_post();
   ?>
 

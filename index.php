@@ -56,6 +56,7 @@
     $args = array( 'post_type' => array('post'), 'post__not_in'=>array($offset_id), 'orderby'=>'date', 'order'=>'DESC', 'posts_per_page' => 12, 'paged' => $paged);
     $wp_query = new WP_Query();
     $wp_query->query( $args );
+    $i=0;
     while ($wp_query->have_posts()) : $wp_query->the_post();
 ?>
     <div class="col-md-4 col-xs-12">
