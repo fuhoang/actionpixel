@@ -32,6 +32,18 @@ p{
 
 }
 
+header {
+    height:110px;
+}
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
+
+
 /*----button-----*/
 .ap-btn{
     background-color: #777;
@@ -39,53 +51,27 @@ p{
 }
 
 /*-------- logo --------*/
-.navbar-header{
-    /*height: 90px*/
-    min-height: 60px
-    }
 
-.navbar .brand{
-    padding: 0 10px 0 0;
-}
-
-.navbar .nav > li > a {
-    padding: 20px;
-    color: #fff;
-    /*padding: 35px 15px;*/
-}
-
-.navbar .btn-navbar {
-    /*margin-right: 0px;*/
-    margin-top:15px;
-}
 .brand img{
-    margin-top: 5px;
-    width: 150px;
+    margin-top: 20px;
+    width: 200px;
 }
 
-@media (max-width:768px) {
-    .brand img{
-        margin-bottom: 5px
-    }
-    .navbar .btn-navbar{
-        /*margin-right: -15px;*/
-    }
-    .navbar .nav > li > a {
-        padding: 10px 15px;
-    }
-}
+
 /*-----------------------*/
 
 
 /*-----main nav-----*/
-.navbar-default {
+.navbar {
     background-color:#262626;
-    border-color: #e7e7e7;
+    border: 0;
+    border-radius: 0;
 }
 .navbar .nav,
 .navbar .nav > li a{
     text-transform: uppercase;
     font-weight: bold;
+    color:#fff;
 }
 .navbar .nav li a:hover{
     color:#ff6600;
@@ -97,69 +83,39 @@ p{
     color:#ff6600;
     background-color: #f5f5f5;
 }
-.navbar{
-    position: relative;
-    margin-bottom:0;
-    border-top: 0px solid #000;
-    border-bottom: 4px solid #ff6600;
+.navbar .navbar-nav{
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse{
+    text-align: center;
 }
 
 .dropdown-menu{
-    border: 2px solid black;
-    border-bottom-right-radius:5px;
-    border-bottom-left-radius:5px;
+    border:2px solid #262626;
     padding: 5px;
 }
-.dropdown-menu > li{
-    margin: 0px;
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
+
 .dropdown-menu > li > a{
-    color: #fff;
-    padding: 10px;
+    color:#fff;
 }
 
- ul.nav li.dropdown > ul.dropdown-menu {
-        background-color: #000;
-        margin: 0;
-    }
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,{
-    color:#ff6600;
-    background-color: #f5f5f5;
+ul.nav li.dropdown > ul.dropdown-menu {
+    background-color: #262626;
 }
 
-.dropdown-menu > .active > a{
-    color:#ff6600;
-    background-color: #f5f5f5;
-    padding: 10px;
-}
 
 @media (min-width: 979px) {
-    ul.nav li.dropdown:hover > ul.dropdown-menu {
-        display: block;
-    }
+
 }
 
 @media (max-width:768px) {
-    .navbar-default .navbar-nav > .open > a,
-    .navbar-default .navbar-nav > .open > a:hover,
-    .navbar-default .navbar-nav > .open > a:focus{
-        color:#ff6600;
-        background-color: #f5f5f5;
-        padding: 10px;
-    }
 
-    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus{
-        color:#ff6600;
-        background-color: #f5f5f5;
-        padding: 10px;
-    }
-
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a{
-        color: #fff;
-        padding: 10px;
-    }
 }
 
 /* search nav*/
@@ -766,3 +722,64 @@ ul.page-numbers span.current {
     height: auto;
 }
 
+.video{
+    background-color: #000000;
+    height: auto;
+    padding: 40px;
+}
+
+.inner-video{
+    border: 0px solid #fff;
+}
+
+.inner-video h2{
+    padding: 20px 0 20px;
+}
+
+.inner-video img{
+    border: 1px solid white;
+    width: 100%;
+    height:300px;
+}
+
+.inner-video-4 img{
+    border: 1px solid white;
+    width: 100%;
+    height:150px;
+}
+
+.inner-video-4 h4{
+    color:#fff;
+}
+
+
+
+.features{
+    background-color: #f5f5f5;
+    height: auto;
+    padding: 40px;
+}
+
+.inner-features{
+    border: 0px solid #fff;
+}
+
+.inner-features h2{
+    padding: 20px 0 20px;
+}
+
+.inner-features img{
+    border: 1px solid white;
+    width: 100%;
+    height:300px;
+}
+
+.inner-features-4 img{
+    border: 1px solid white;
+    width: 100%;
+    height:150px;
+}
+
+.inner-features-4 h4{
+    color:#fff;
+}

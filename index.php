@@ -30,7 +30,91 @@
   </div>
 </div>
 
+<div class="container-fluid video">
+  <div class="container inner-video">
+
+    <h2>Video</h2>
+    <div class="row">
+
+      <div class="col-md-6">
+        <img src="#">
+        <h4>This is the title for the this thumbnail</h4>
+        <span>This is a small description</span>
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="row inner-video-4">
+          <div class="col-xs-6 col-md-6">
+            <img src="#">
+            <h4>This is the title for the this thumbnail</h4>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <img src="#">
+            <h4>This is the title for the this thumbnail</h4>
+
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <img src="#">
+            <h4>This is the title for the this thumbnail</h4>
+
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <img src="#">
+            <h4>This is the title for the this thumbnail</h4>
+
+          </div>
+        </div>
+
+      </div>
+    </div><!-- end row-->
+
+  </div>
+</div>
+
+<div class="container-fluid features">
+  <div class="container inner-features">
+    <h2>Feature</h2>
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="row inner-features-4">
+          <div class="col-xs-6 col-md-6">
+            <img src="#">
+            <h4>This is the title for the this thumbnail</h4>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <img src="#">
+            <h4>This is the title for the this thumbnail</h4>
+
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <img src="#">
+            <h4>This is the title for the this thumbnail</h4>
+
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <img src="#">
+            <h4>This is the title for the this thumbnail</h4>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <img src="#">
+        <h4>This is the title for the this thumbnail</h4>
+        <span>This is a small description</span>
+      </div>
+    </div><!-- end row-->
+  </div>
+</div>
+
+
+
 <div class="container main">
+
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div class="leaderboard">
@@ -48,6 +132,11 @@
 
     </div>
   </div>
+
+
+
+
+
   <div class="row">
 <?php
   if ( get_query_var('paged') ) { $paged = get_query_var('paged'); } else if ( get_query_var('page') ) {$paged = get_query_var('page'); } else {$paged = 1; }

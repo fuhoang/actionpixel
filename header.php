@@ -17,7 +17,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
   <!-- style css -->
-	<link href = "<?php bloginfo('stylesheet_url'); ?>" rel = "stylesheet">
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -49,8 +50,18 @@
 }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<nav class = "navbar navbar-default navbar-static-top">
-  <div class = "container">
+<header class="masthead">
+  <div class="container">
+  <div class="row">
+
+      <a class="brand" href="<?php echo site_url() ?>"><img class="center-block" src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="the action pixel"></a>
+
+  </div>
+  </div>
+</header>
+
+<nav id="nav" class="navbar navbar-default navbar-static">
+  <div class="container">
 
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -58,21 +69,19 @@
         <span class = "icon-bar"></span>
         <span class = "icon-bar"></span>
       </button>
-      <a class="brand" href="<?php echo site_url() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="the action pixel"></a>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
-  <?php
-      wp_nav_menu( array(
-        'menu'              => 'primary',
-        'theme_location'    => 'primary',
-        'depth'             => 2,
-        'menu_class'        => 'nav navbar-nav navbar-right',
-        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-        'walker'            => new wp_bootstrap_navwalker())
-      );
-  ?>
-
+    <?php
+        wp_nav_menu( array(
+          'menu'              => 'primary',
+          'theme_location'    => 'primary',
+          'depth'             => 2,
+          'menu_class'        => 'nav navbar-nav',
+          'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+          'walker'            => new wp_bootstrap_navwalker())
+        );
+    ?>
     </div>
   </div>
 </nav>

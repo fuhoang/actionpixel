@@ -37,3 +37,9 @@ $(document).ready(function(){
                     $('.searchbox-icon').css('display','block');
                 }
             }
+
+$('#nav').affix({
+      offset: {
+        top: $('header').height()
+      }
+});
