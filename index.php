@@ -37,7 +37,12 @@
     <div class="row">
 
       <div class="col-md-6">
-        <img src="#">
+        <a class="image-link" href="#">
+        <img class="item-image" src="<?php bloginfo('template_directory'); ?>/images/PixelPlays_BANNER.jpg">
+        <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+
+
+        </a>
         <h4>This is the title for the this thumbnail</h4>
         <span>This is a small description</span>
       </div>
@@ -46,21 +51,36 @@
 
         <div class="row inner-video-4">
           <div class="col-xs-6 col-md-6">
-            <img src="#">
+            <a class="image-link" href="#">
+
+              <img class="item-image" src="<?php bloginfo('template_directory'); ?>/images/THEARTISTPANEL_BANNER.jpg">
+              <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+            </a>
             <h4>This is the title for the this thumbnail</h4>
           </div>
           <div class="col-xs-6 col-md-6">
-            <img src="#">
+            <a class="image-link" href="#">
+              <img class="item-image" src="<?php bloginfo('template_directory'); ?>/images/DANGUY_BANNER.jpg">
+              <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+
+            </a>
             <h4>This is the title for the this thumbnail</h4>
 
           </div>
           <div class="col-xs-6 col-md-6">
-            <img src="#">
+            <a class="image-link" href="#">
+              <img class="item-image" src="<?php bloginfo('template_directory'); ?>/images/TAP10_BANNER.jpg">
+              <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+
+            </a>
             <h4>This is the title for the this thumbnail</h4>
 
           </div>
           <div class="col-xs-6 col-md-6">
-            <img src="#">
+            <a class="image-link" href="#">
+              <img class="item-image" src="<?php bloginfo('template_directory'); ?>/images/TAP10_BANNER.jpg">
+              <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+            </a>
             <h4>This is the title for the this thumbnail</h4>
 
           </div>
@@ -81,21 +101,21 @@
 
         <div class="row inner-features-4">
           <div class="col-xs-6 col-md-6">
-            <img src="#">
+            <img src="<?php bloginfo('template_directory'); ?>/images/DANGUY_BANNER.jpg">
             <h4>This is the title for the this thumbnail</h4>
           </div>
           <div class="col-xs-6 col-md-6">
-            <img src="#">
-            <h4>This is the title for the this thumbnail</h4>
-
-          </div>
-          <div class="col-xs-6 col-md-6">
-            <img src="#">
+            <img src="<?php bloginfo('template_directory'); ?>/images/DANGUY_BANNER.jpg">
             <h4>This is the title for the this thumbnail</h4>
 
           </div>
           <div class="col-xs-6 col-md-6">
-            <img src="#">
+            <img src="<?php bloginfo('template_directory'); ?>/images/TAP10_BANNER.jpg">
+            <h4>This is the title for the this thumbnail</h4>
+
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <img src="<?php bloginfo('template_directory'); ?>/images/DANGUY_BANNER.jpg">
             <h4>This is the title for the this thumbnail</h4>
 
           </div>
@@ -103,7 +123,7 @@
 
       </div>
       <div class="col-md-6">
-        <img src="#">
+        <img src="<?php bloginfo('template_directory'); ?>/images/TAP10_BANNER.jpg">
         <h4>This is the title for the this thumbnail</h4>
         <span>This is a small description</span>
       </div>

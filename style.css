@@ -105,6 +105,16 @@ header {
     color:#fff;
 }
 
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+    color:#ff6600;
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus  {
+    color:#ff6600;
+    background-color: #f5f5f5;
+}
+
 ul.nav li.dropdown > ul.dropdown-menu {
     background-color: #262626;
 }
@@ -734,24 +744,43 @@ ul.page-numbers span.current {
 
 .inner-video h2{
     padding: 20px 0 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.inner-video img{
-    border: 1px solid white;
+.inner-video .item-image{
+    border: 2px solid #000;
     width: 100%;
     height:300px;
 }
 
-.inner-video-4 img{
-    border: 1px solid white;
-    width: 100%;
-    height:150px;
+.image-link{
+    position: relative;
+    display: block;
+}
+.inner-video .overlay-icon{
+    position: absolute;
+    top:30%;
+    left: 40%;
 }
 
 .inner-video-4 h4{
     color:#fff;
 }
 
+.inner-video-4 .overlay-icon{
+    position: absolute;
+    top:30%;
+    left: 40%;
+    width: 60px;
+}
+
+.inner-video-4 .item-image{
+    border: 2px solid #000;
+    width: 100%;
+    height:150px;
+}
 
 
 .features{
@@ -766,6 +795,8 @@ ul.page-numbers span.current {
 
 .inner-features h2{
     padding: 20px 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .inner-features img{
@@ -781,5 +812,5 @@ ul.page-numbers span.current {
 }
 
 .inner-features-4 h4{
-    color:#fff;
+    color:#000;
 }
