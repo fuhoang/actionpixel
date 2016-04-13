@@ -19,7 +19,7 @@
       </figure>
     </a>
     <div class="header-info">
-      <h1><a href=" <?php the_permalink();?>"><?php the_title(); ?></a></h1>
+      <h1><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
       <span class="subtitle"><?php the_subtitle(); ?></span>
       <p><a class="btn btn-sm ap-btn" href="<?php the_permalink();?>" role="button">Read</a></p>
     </div>
@@ -31,60 +31,62 @@
 </div>
 
 <div class="container-fluid video">
-  <div class="container inner-video">
+  <div class="container">
 
     <h2>Video</h2>
     <div class="row">
 
       <div class="col-md-6">
-        <a class="image-link" href="#">
-        <img class="item-image" src="<?php bloginfo('template_directory'); ?>/images/PixelPlays_BANNER.jpg">
-        <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+      <?php
+        $the_query = new WP_Query(array('category_name' => 'video', 'posts_per_page' =>1));
+
+        if ( $the_query->have_posts() ) :
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+          $category = get_the_category();
+      ?>
 
 
+        <a class="image-link" href="<?php the_permalink();?>">
+          <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
+          <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
         </a>
-        <h4>This is the title for the this thumbnail</h4>
-        <span>This is a small description</span>
+        <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+      <?php
+          endwhile;
+        endif;
+      ?>
       </div>
 
       <div class="col-md-6">
 
-        <div class="row inner-video-4">
+        <div class="row inner-section-4">
+          <?php
+            $the_query = new WP_Query(array('category_name' => 'video', 'posts_per_page' =>4, 'offset' => 1));
+            $i = 0;
+            if ( $the_query->have_posts() ) :
+              while ( $the_query->have_posts() ) : $the_query->the_post();
+              $category = get_the_category();
+          ?>
           <div class="col-xs-6 col-md-6">
-            <a class="image-link" href="#">
+            <a class="image-link" href="<?php the_permalink();?>">
 
-              <img class="item-image" src="<?php bloginfo('template_directory'); ?>/images/THEARTISTPANEL_BANNER.jpg">
+              <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
               <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
-            </a>
-            <h4>This is the title for the this thumbnail</h4>
-          </div>
-          <div class="col-xs-6 col-md-6">
-            <a class="image-link" href="#">
-              <img class="item-image" src="<?php bloginfo('template_directory'); ?>/images/DANGUY_BANNER.jpg">
-              <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
-
-            </a>
-            <h4>This is the title for the this thumbnail</h4>
-
-          </div>
-          <div class="col-xs-6 col-md-6">
-            <a class="image-link" href="#">
-              <img class="item-image" src="<?php bloginfo('template_directory'); ?>/images/TAP10_BANNER.jpg">
-              <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
 
             </a>
-            <h4>This is the title for the this thumbnail</h4>
-
+            <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
           </div>
-          <div class="col-xs-6 col-md-6">
-            <a class="image-link" href="#">
-              <img class="item-image" src="<?php bloginfo('template_directory'); ?>/images/TAP10_BANNER.jpg">
-              <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
-            </a>
-            <h4>This is the title for the this thumbnail</h4>
 
-          </div>
-        </div>
+          <?php
+          $i++;
+          if ($i%2 == 0) echo '</div><div class="row inner-section-4">';
+              endwhile;
+            endif;
+          ?>
+
+        </div><!-- end nested row inner-video-4-->
 
       </div>
     </div><!-- end row-->
@@ -93,40 +95,59 @@
 </div>
 
 <div class="container-fluid features">
-  <div class="container inner-features">
+  <div class="container">
     <h2>Feature</h2>
+
     <div class="row">
 
       <div class="col-md-6">
 
-        <div class="row inner-features-4">
-          <div class="col-xs-6 col-md-6">
-            <img src="<?php bloginfo('template_directory'); ?>/images/DANGUY_BANNER.jpg">
-            <h4>This is the title for the this thumbnail</h4>
-          </div>
-          <div class="col-xs-6 col-md-6">
-            <img src="<?php bloginfo('template_directory'); ?>/images/DANGUY_BANNER.jpg">
-            <h4>This is the title for the this thumbnail</h4>
+        <div class="row inner-section-4">
 
-          </div>
+          <?php
+            $the_query = new WP_Query(array('category_name' => 'features', 'posts_per_page' =>4, 'offset' => 1));
+            $i = 0;
+            if ( $the_query->have_posts() ) :
+              while ( $the_query->have_posts() ) : $the_query->the_post();
+              $category = get_the_category();
+              //print_r($category);
+          ?>
           <div class="col-xs-6 col-md-6">
-            <img src="<?php bloginfo('template_directory'); ?>/images/TAP10_BANNER.jpg">
-            <h4>This is the title for the this thumbnail</h4>
-
+            <a class="image-link"  href="<?php the_permalink();?>">
+              <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
+              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+              <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+            </a>
           </div>
-          <div class="col-xs-6 col-md-6">
-            <img src="<?php bloginfo('template_directory'); ?>/images/DANGUY_BANNER.jpg">
-            <h4>This is the title for the this thumbnail</h4>
+          <?php
+            $i++;
+            if ($i%2 == 0) echo '</div><div class="row inner-section-4">';
+                endwhile;
+              endif;
+          ?>
 
-          </div>
         </div>
 
       </div>
+      <?php
+        $the_query = new WP_Query(array('category_name' => 'features', 'posts_per_page' =>1));
+
+        if ( $the_query->have_posts() ) :
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+          $category = get_the_category();
+      ?>
       <div class="col-md-6">
-        <img src="<?php bloginfo('template_directory'); ?>/images/TAP10_BANNER.jpg">
-        <h4>This is the title for the this thumbnail</h4>
-        <span>This is a small description</span>
+        <a class="image-link"  href="<?php the_permalink();?>">
+          <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive")); ?>
+          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+        </a>
+        <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
       </div>
+
+      <?php
+          endwhile;
+        endif;
+      ?>
     </div><!-- end row-->
   </div>
 </div>

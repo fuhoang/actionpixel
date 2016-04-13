@@ -18,6 +18,7 @@ if(function_exists('add_image_size')){
 	add_image_size( 'post-thumbnail', 800, 600, true);
 	add_image_size( 'feature',  1400, 1000, array( 'left', 'top' ) );
 	add_image_size( 'recent-thumbnails',  800, 600, array( 'left', 'top' ) );
+    add_image_size( 'video-home');
 
 }
 
@@ -36,8 +37,8 @@ function alx_embed_html( $html ) {
 add_filter( 'embed_oembed_html', 'alx_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
 
-/*
-if(function_exists(register_sidebar)){
+
+if(function_exists("register_sidebar")){
 	register_sidebar( array(
 		'name' => 'Sidebar Widgets',
 		'id' => 'sidebar-widgets',
@@ -46,8 +47,16 @@ if(function_exists(register_sidebar)){
 		'after_widget' => '</div>',
 
 	));
+
+    register_sidebar(array(
+        'name' => 'Footer Widgets',
+        'id' => 'footer-widgets',
+        'description' => 'Place widgets for the footer here',
+        'before_widget' => '<div class="col-xs-12 col-md-3 footer-section">',
+        'after_widget' => '</div>'
+    ));
 }
-*/
+
 function new_excerpt_more( $more ) {
 	return ' ...';
 }
