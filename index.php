@@ -29,40 +29,136 @@
 <?php endif;?>
   </div>
 </div>
-
-<div class="container-fluid video">
-  <div class="container">
-
-    <h2>Video</h2>
+<div class="container-fluid">
+  <div class="container sub-header">
     <div class="row">
-
-      <div class="col-md-6">
       <?php
-        $the_query = new WP_Query(array('category_name' => 'video', 'posts_per_page' =>1));
+        $the_query = new WP_Query(array('offset' => 1, 'posts_per_page' =>3));
 
         if ( $the_query->have_posts() ) :
           while ( $the_query->have_posts() ) : $the_query->the_post();
           $category = get_the_category();
       ?>
+      <div class="col-md-4">
+        <div class="sub-header-section">
+          <div class="sub-image-container hover01">
+            <a href="<?php the_permalink();?>">
+            <figure>
+              <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive")); ?>
+            </figure>
+            </a>
+          </div>
+          <span> <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2> </span>
+          <div class="meta-info-header">
+            <i class="fa fa-user"> <?php the_author(); ?></i>
+            <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+            <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+          </div>
+        </div>
+      </div>
+      <?php
+          endwhile;
+        endif;
+      ?>
+    </div><!-- Row -->
+  </div><!-- End container -->
+</div><!-- End container fluid -->
 
+<div class="container-fluid black-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Animation</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row inner-section-4">
+          <?php
+            $the_query = new WP_Query(array('category_name' => 'animation', 'posts_per_page' =>4, 'offset' => 1));
+            $i = 0;
+            if ( $the_query->have_posts() ) :
+              while ( $the_query->have_posts() ) : $the_query->the_post();
+              $category = get_the_category();
+              //print_r($category);
+          ?>
+          <div class="col-xs-6 col-md-6">
+            <a class="image-link"  href="<?php the_permalink();?>">
+              <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
+              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
 
-        <a class="image-link" href="<?php the_permalink();?>">
-          <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
-          <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+              <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+              <div class="thumb-meta">
+                <i class="fa fa-user"> <?php the_author(); ?></i>
+                <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+                <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+              </div>
+            </a>
+          </div>
+          <?php
+                $i++;
+                if ($i%2 == 0) echo '</div><div class="row inner-section-4">';
+              endwhile;
+            endif;
+          ?>
+        </div>
+      </div>
+      <?php
+        $the_query = new WP_Query(array('category_name' => 'animation', 'posts_per_page' =>1));
+        if ( $the_query->have_posts() ) :
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+          $category = get_the_category();
+      ?>
+      <div class="col-md-6">
+        <a class="image-link"  href="<?php the_permalink();?>">
+          <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive")); ?>
           <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
         </a>
-        <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+        <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+        <div class="thumb-meta">
+          <i class="fa fa-user"> <?php the_author(); ?></i>
+          <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+          <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+        </div>
+      </div>
+      <?php
+          endwhile;
+        endif;
+      ?>
+    </div><!-- end row-->
+  </div><!-- End container -->
+</div><!--End container fluid-->
+
+<div class="container-fluid cream-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Comics</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+      <?php
+        $the_query = new WP_Query(array('category_name' => 'comics', 'posts_per_page' =>1));
+        if ( $the_query->have_posts() ) :
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+          $category = get_the_category();
+      ?>
+        <a class="image-link" href="<?php the_permalink();?>">
+          <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
+          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+        </a>
+        <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+        <div class="thumb-meta">
+          <i class="fa fa-user"> <?php the_author(); ?></i>
+          <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+          <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+        </div>
       <?php
           endwhile;
         endif;
       ?>
       </div>
-
       <div class="col-md-6">
-
         <div class="row inner-section-4">
           <?php
-            $the_query = new WP_Query(array('category_name' => 'video', 'posts_per_page' =>4, 'offset' => 1));
+            $the_query = new WP_Query(array('category_name' => 'comics', 'posts_per_page' =>4, 'offset' => 1));
             $i = 0;
             if ( $the_query->have_posts() ) :
               while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -72,38 +168,161 @@
             <a class="image-link" href="<?php the_permalink();?>">
 
               <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
-              <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
               <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
 
             </a>
             <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+            <div class="thumb-meta">
+              <i class="fa fa-user"> <?php the_author(); ?></i>
+              <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+              <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+            </div>
           </div>
-
           <?php
-          $i++;
-          if ($i%2 == 0) echo '</div><div class="row inner-section-4">';
+                $i++;
+                if ($i%2 == 0) echo '</div><div class="row inner-section-4">';
               endwhile;
             endif;
           ?>
-
         </div><!-- end nested row inner-video-4-->
-
       </div>
     </div><!-- end row-->
+  </div><!-- End of container-->
+</div><!-- End of container fluid-->
 
+<div class="container-fluid black-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Gaming</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row inner-section-4">
+          <?php
+            $the_query = new WP_Query(array('category_name' => 'gaming', 'posts_per_page' =>4, 'offset' => 1));
+            $i = 0;
+            if ( $the_query->have_posts() ) :
+              while ( $the_query->have_posts() ) : $the_query->the_post();
+              $category = get_the_category();
+              //print_r($category);
+          ?>
+          <div class="col-xs-6 col-md-6">
+            <a class="image-link"  href="<?php the_permalink();?>">
+              <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
+              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+              <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+              <div class="thumb-meta">
+                <i class="fa fa-user"> <?php the_author(); ?></i>
+                <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+                <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+              </div>
+            </a>
+          </div>
+          <?php
+                $i++;
+                if ($i%2 == 0) echo '</div><div class="row inner-section-4">';
+              endwhile;
+            endif;
+          ?>
+        </div>
+      </div>
+      <?php
+        $the_query = new WP_Query(array('category_name' => 'gaming', 'posts_per_page' =>1));
+        if ( $the_query->have_posts() ) :
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+          $category = get_the_category();
+      ?>
+      <div class="col-md-6">
+        <a class="image-link"  href="<?php the_permalink();?>">
+          <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive")); ?>
+          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+        </a>
+        <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+        <div class="thumb-meta">
+          <i class="fa fa-user"> <?php the_author(); ?></i>
+          <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+          <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+        </div>
+      </div>
+      <?php
+          endwhile;
+        endif;
+      ?>
+    </div><!-- end row-->
   </div>
 </div>
 
-<div class="container-fluid features">
+<div class="container-fluid cream-section">
   <div class="container">
-    <h2>Feature</h2>
-
+    <div class="section-header">
+      <h2>Reviews</h2>
+    </div>
     <div class="row">
-
       <div class="col-md-6">
-
+      <?php
+        $the_query = new WP_Query(array('category_name' => 'reviews', 'posts_per_page' =>1));
+        if ( $the_query->have_posts() ) :
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+          $category = get_the_category();
+      ?>
+        <a class="image-link" href="<?php the_permalink();?>">
+          <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
+          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+        </a>
+        <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+        <div class="thumb-meta">
+          <i class="fa fa-user"> <?php the_author(); ?></i>
+          <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+          <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+        </div>
+      <?php
+          endwhile;
+        endif;
+      ?>
+      </div>
+      <div class="col-md-6">
         <div class="row inner-section-4">
+          <?php
+            $the_query = new WP_Query(array('category_name' => 'reviews', 'posts_per_page' =>4, 'offset' => 1));
+            $i = 0;
+            if ( $the_query->have_posts() ) :
+              while ( $the_query->have_posts() ) : $the_query->the_post();
+              $category = get_the_category();
+          ?>
+          <div class="col-xs-6 col-md-6">
+            <a class="image-link" href="<?php the_permalink();?>">
 
+              <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
+              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+
+            </a>
+            <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+            <div class="thumb-meta">
+              <i class="fa fa-user"> <?php the_author(); ?></i>
+              <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+              <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+            </div>
+          </div>
+          <?php
+                $i++;
+                if ($i%2 == 0) echo '</div><div class="row inner-section-4">';
+              endwhile;
+            endif;
+          ?>
+        </div><!-- end nested row inner-video-4-->
+      </div>
+    </div><!-- end row-->
+  </div><!-- End of container -->
+</div><!-- End of Container Fluid -->
+
+<div class="container-fluid black-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Features</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row inner-section-4">
           <?php
             $the_query = new WP_Query(array('category_name' => 'features', 'posts_per_page' =>4, 'offset' => 1));
             $i = 0;
@@ -117,21 +336,23 @@
               <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
               <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
               <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+              <div class="thumb-meta">
+                <i class="fa fa-user"> <?php the_author(); ?></i>
+                <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+                <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+              </div>
             </a>
           </div>
           <?php
-            $i++;
-            if ($i%2 == 0) echo '</div><div class="row inner-section-4">';
-                endwhile;
-              endif;
+                $i++;
+                if ($i%2 == 0) echo '</div><div class="row inner-section-4">';
+              endwhile;
+            endif;
           ?>
-
         </div>
-
       </div>
       <?php
         $the_query = new WP_Query(array('category_name' => 'features', 'posts_per_page' =>1));
-
         if ( $the_query->have_posts() ) :
           while ( $the_query->have_posts() ) : $the_query->the_post();
           $category = get_the_category();
@@ -141,9 +362,13 @@
           <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive")); ?>
           <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
         </a>
-        <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+        <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+        <div class="thumb-meta">
+          <i class="fa fa-user"> <?php the_author(); ?></i>
+          <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+          <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+        </div>
       </div>
-
       <?php
           endwhile;
         endif;
@@ -152,10 +377,70 @@
   </div>
 </div>
 
-
+<div class="container-fluid cream-section">
+  <div class="container">
+    <div class="section-header">
+    <h2>Videos</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+      <?php
+        $the_query = new WP_Query(array('category_name' => 'video', 'posts_per_page' =>1));
+        if ( $the_query->have_posts() ) :
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+          $category = get_the_category();
+      ?>
+        <a class="image-link" href="<?php the_permalink();?>">
+          <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
+          <img class="overlay-icon img-responsive" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+        </a>
+        <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+        <div class="thumb-meta">
+          <i class="fa fa-user"> <?php the_author(); ?></i>
+          <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+          <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+        </div>
+      <?php
+          endwhile;
+        endif;
+      ?>
+      </div>
+      <div class="col-md-6">
+        <div class="row inner-section-4">
+          <?php
+            $the_query = new WP_Query(array('category_name' => 'video', 'posts_per_page' =>4, 'offset' => 1));
+            $i = 0;
+            if ( $the_query->have_posts() ) :
+              while ( $the_query->have_posts() ) : $the_query->the_post();
+              $category = get_the_category();
+          ?>
+          <div class="col-xs-6 col-md-6">
+            <a class="image-link" href="<?php the_permalink();?>">
+              <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
+              <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
+              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+            </a>
+            <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+            <div class="thumb-meta">
+              <i class="fa fa-user"> <?php the_author(); ?></i>
+              <i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
+              <i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
+            </div>
+          </div>
+          <?php
+          $i++;
+          if ($i%2 == 0) echo '</div><div class="row inner-section-4">';
+              endwhile;
+            endif;
+          ?>
+        </div><!-- end nested row inner-video-4-->
+      </div>
+    </div><!-- end row-->
+  </div><!-- end container -->
+</div><!-- end container fluid -->
 
 <div class="container main">
-
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div class="leaderboard">
@@ -170,78 +455,6 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>
-
-    </div>
-  </div>
-
-
-
-
-
-  <div class="row">
-<?php
-  if ( get_query_var('paged') ) { $paged = get_query_var('paged'); } else if ( get_query_var('page') ) {$paged = get_query_var('page'); } else {$paged = 1; }
-    $temp = $wp_query;  // re-sets query
-    $wp_query = null;   // re-sets query
-    $args = array( 'post_type' => array('post'), 'post__not_in'=>array($offset_id), 'orderby'=>'date', 'order'=>'DESC', 'posts_per_page' => 12, 'paged' => $paged);
-    $wp_query = new WP_Query();
-    $wp_query->query( $args );
-    $i=0;
-    while ($wp_query->have_posts()) : $wp_query->the_post();
-?>
-    <div class="col-md-4 col-xs-12">
-      <div class="thumbnail">
-        <a href="<?php the_permalink(); ?>">
-          <div class="thumbnail-img-container hover01">
-            <figure>
-              <?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'img-responsive' ) );?>
-            </figure>
-          </div>
-        </a>
-        	<div class="well">
-
-        		<i class="fa fa-user"> <?php the_author(); ?></i>
-        		<i class="fa fa-calendar"> <?php the_time('jS M,  Y'); ?></i>
-        		<i class="fa fa-folder"> <?php echo get_the_category_list(', '); ?> </i>
-        	</div>
-          <div class="caption">
-            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            <?php the_excerpt('...'); ?>
-            <p><a href="<?php the_permalink(); ?>" class="btn btn-xs ap-btn" role="button">Read</a></p>
-          </div>
-      </div>
-    </div>
-    <?php
-			$i++;
-    			if ($i%3 == 0) echo '</div><div class="row">';
-        endwhile;?>
-  </div><!-- End row -->
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <div class="leaderboard">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- bottom leaderboard -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2424508156013330"
-             data-ad-slot="2290609674"
-             data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-
-      <?php
-        paginate();
-        $wp_query = null;
-        $wp_query = $temp; // Reset
-      ?>
-
     </div>
   </div>
 </div>
