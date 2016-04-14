@@ -83,7 +83,7 @@
           <div class="col-xs-6 col-md-6">
             <a class="image-link"  href="<?php the_permalink();?>">
               <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
-              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+              <!--<span class="category-thumb"><?php //echo $category[0]->cat_name; ?></span>-->
 
               <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
               <div class="thumb-meta">
@@ -110,7 +110,7 @@
       <div class="col-md-6">
         <a class="image-link"  href="<?php the_permalink();?>">
           <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive")); ?>
-          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+          <!--<span class="category-thumb"><?php //echo $category[0]->cat_name; ?></span>-->
         </a>
         <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
         <div class="thumb-meta">
@@ -142,7 +142,6 @@
       ?>
         <a class="image-link" href="<?php the_permalink();?>">
           <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
-          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
         </a>
         <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
         <div class="thumb-meta">
@@ -166,10 +165,7 @@
           ?>
           <div class="col-xs-6 col-md-6">
             <a class="image-link" href="<?php the_permalink();?>">
-
               <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
-              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
-
             </a>
             <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
             <div class="thumb-meta">
@@ -209,7 +205,6 @@
           <div class="col-xs-6 col-md-6">
             <a class="image-link"  href="<?php the_permalink();?>">
               <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
-              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
               <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
               <div class="thumb-meta">
                 <i class="fa fa-user"> <?php the_author(); ?></i>
@@ -235,7 +230,6 @@
       <div class="col-md-6">
         <a class="image-link"  href="<?php the_permalink();?>">
           <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive")); ?>
-          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
         </a>
         <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
         <div class="thumb-meta">
@@ -267,7 +261,6 @@
       ?>
         <a class="image-link" href="<?php the_permalink();?>">
           <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
-          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
         </a>
         <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
         <div class="thumb-meta">
@@ -291,10 +284,7 @@
           ?>
           <div class="col-xs-6 col-md-6">
             <a class="image-link" href="<?php the_permalink();?>">
-
               <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
-              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
-
             </a>
             <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
             <div class="thumb-meta">
@@ -334,7 +324,7 @@
           <div class="col-xs-6 col-md-6">
             <a class="image-link"  href="<?php the_permalink();?>">
               <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
-              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+              <!--<span class="category-thumb"><?php //echo $category[0]->cat_name; ?></span>-->
               <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
               <div class="thumb-meta">
                 <i class="fa fa-user"> <?php the_author(); ?></i>
@@ -360,7 +350,7 @@
       <div class="col-md-6">
         <a class="image-link"  href="<?php the_permalink();?>">
           <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive")); ?>
-          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
+          <!--<span class="category-thumb"><?php //echo $category[0]->cat_name; ?></span>-->
         </a>
         <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
         <div class="thumb-meta">
@@ -393,7 +383,6 @@
         <a class="image-link" href="<?php the_permalink();?>">
           <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
           <img class="overlay-icon img-responsive" src="<?php bloginfo('template_directory'); ?>/images/play.png">
-          <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
         </a>
         <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
         <div class="thumb-meta">
@@ -419,7 +408,6 @@
             <a class="image-link" href="<?php the_permalink();?>">
               <?php the_post_thumbnail('feature', array( 'class'  => "img-responsive item-image")); ?>
               <img class="overlay-icon" src="<?php bloginfo('template_directory'); ?>/images/play.png">
-              <span class="category-thumb"><?php echo $category[0]->cat_name; ?></span>
             </a>
             <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
             <div class="thumb-meta">
