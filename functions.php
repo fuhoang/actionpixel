@@ -18,7 +18,8 @@ if(function_exists('add_image_size')){
 	add_image_size( 'post-thumbnail', 800, 600, true);
 	add_image_size( 'feature',  1400, 1000, array( 'left', 'top' ) );
 	add_image_size( 'recent-thumbnails',  800, 600, array( 'left', 'top' ) );
-    add_image_size( 'video-home');
+    add_image_size( 'video-home', 400, 250, array( 'left', 'top' ));
+    add_image_size( 'section-thumb', 400, 250, array( 'left', 'top' ));
 
 }
 
