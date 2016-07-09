@@ -11,9 +11,7 @@
 	</div>
 	<div class="container">
 		<div class="row">
-
 			<p class="footer_copyright center-block">Action Pixel Copyright &copy; 2015</p>
-
 		</div>
 	</div>
 </footer>

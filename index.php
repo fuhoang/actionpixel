@@ -23,6 +23,10 @@
     </div>
 
     <div class="header-info">
+
+      <div class="tap">
+        <img class="center-block img-responsive" src="<?php bloginfo('template_directory'); ?>/images/tap.jpg" alt="the action pixel">
+      </div>
       <h1><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
       <span class="subtitle"><?php the_subtitle(); ?></span>
     </div>

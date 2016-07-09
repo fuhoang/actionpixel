@@ -4,7 +4,7 @@ Theme URI: http://theactionpixel.com
 Description: Action Pixel blog
 Author: Action Pixel
 Author URI: http://theactionpixel.com
-Version: 2.0
+Version: 2.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -316,8 +316,6 @@ ul.nav li.dropdown > ul.dropdown-menu {
     }
 
 }
-
-
 .header-info a{
     color:#ff6600;
 }
@@ -328,6 +326,18 @@ ul.nav li.dropdown > ul.dropdown-menu {
     .header-info h1 {
         font-size: 20px;
     }
+}
+
+.tap{
+    float: left;
+    width: 100px;
+    height:100px;
+    border: 0px solid red;
+    margin-right: 25px;
+}
+
+.tap img{
+    width: 100px;
 }
 
 .subtitle{
